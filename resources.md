@@ -10,6 +10,16 @@ Companion handout for both sessions. Written to be given out, not read aloud.
 Download Logos Basecamp — [releases page](https://github.com/logos-co/logos-basecamp/releases/latest),
 Linux AppImage or macOS DMG. Open it, look at the Package Manager, install a module.
 
+**"I want the actual documentation."**
+[docs.logos.co](https://docs.logos.co) — the real docs site, organised by layer. This is the
+front door; the `logos-docs` repo below is where you file a fix.
+
+**"I want to know what's happening right now."**
+[roadmap.logos.co](https://roadmap.logos.co) — every team publishes a weekly update, and they
+are unusually candid. Storage, messaging, blockchain, Basecamp and AnonComms each have their
+own stream. Deep research is discussed openly at
+[forum.research.logos.co](https://forum.research.logos.co).
+
 **"I want to understand the ideas."**
 [logos.co/manifesto](https://logos.co/manifesto) for the why ·
 [Farewell to Westphalia](https://logos.co/farewell-to-westphalia) for the political argument ·
@@ -86,10 +96,20 @@ Logos Messaging.
 **Lambda Prize (ꟛPrize)** — a prize for hard, ambitious problems where the *solution isn't
 dictated*. You define the approach.
 
-**libchat** — the secure messaging layer built on Logos Messaging: identity,
-introduction bundles, private one-to-one conversations, delivery acknowledgements.
-Reachable in Basecamp as the ChatSDK module. Content encryption, so every app doesn't
-have to invent its own.
+**de-MLS** — a decentralised take on Messaging Layer Security, the standard the industry is
+converging on for encrypted group chat. Being integrated into libchat; it's what turns secure
+one-to-one messaging into a secure organisation.
+
+**Intents** — how one Basecamp app asks another to do something. Routed through the host,
+which checks the caller declared it uses that capability. The asker can't forge a reply or
+learn who answered.
+
+**λAccount** — an identity primitive in review: an account as a durable thing you own, rather
+than a handle somebody issued to you.
+
+**libchat** — the secure messaging layer built on Logos Messaging: identity, introduction
+bundles, private conversations, delivery acknowledgements. Reachable in Basecamp as the
+ChatSDK module. Content encryption, so every app doesn't have to invent its own.
 
 **libp2p-mix** — mixnet routing being wired into the peer-to-peer layer. Messages hop
 through a pool of relays that each peel one layer of encryption and hold the message
@@ -110,6 +130,17 @@ the blockchain.
 
 **logoscore** — the runtime that runs Basecamp modules headless, with no UI. How you get an
 always-on peer.
+
+**Organic replication** — how files stay available on Logos Storage: whoever downloads
+something also becomes a source of it, so availability follows interest. The flip side is
+that a file nobody fetches can disappear. There are no paid durability guarantees.
+
+**Sphinx** — the packet format used by the mix transport. Every hop looks identical in size
+and shape, so an observer can't follow a message through the network by watching it.
+
+**Unlinkability** — the property Logos Storage is being built around: nobody can tell who
+published a file, and nobody can tell who fetched it — queries included. Distinct from
+encryption, which hides contents but not the fact that you asked.
 
 **Module** — a Basecamp component. Core modules hold logic; UI modules draw. Modules declare
 dependencies on each other and are installed via the Package Manager.
@@ -134,7 +165,8 @@ interface, CLI and deployment generated.
 | | Repo |
 |---|---|
 | Messaging | [`logos-messaging/logos-delivery`](https://github.com/logos-messaging/logos-delivery) |
-| Messaging — secure chat layer (libchat) | [`logos-messaging/logos-chat`](https://github.com/logos-messaging/logos-chat) |
+| Messaging — chat system | [`logos-messaging/logos-chat`](https://github.com/logos-messaging/logos-chat) |
+| Messaging — libchat (the library under it, Rust) | [`logos-messaging/libchat`](https://github.com/logos-messaging/libchat) |
 | Messaging — mix protocol (libp2p-mix) | [`vacp2p/nim-libp2p`](https://github.com/vacp2p/nim-libp2p) |
 | Storage | [`logos-storage/logos-storage-nim`](https://github.com/logos-storage/logos-storage-nim) |
 | Blockchain | [`logos-blockchain/logos-blockchain`](https://github.com/logos-blockchain/logos-blockchain) |
@@ -164,7 +196,10 @@ interface, CLI and deployment generated.
 
 | | Where |
 |---|---|
-| Documentation | [`logos-co/logos-docs`](https://github.com/logos-co/logos-docs) |
+| Documentation (read it) | [docs.logos.co](https://docs.logos.co) |
+| Documentation (fix it) | [`logos-co/logos-docs`](https://github.com/logos-co/logos-docs) |
+| Weekly updates from every team | [roadmap.logos.co](https://roadmap.logos.co) · [`logos-co/roadmap`](https://github.com/logos-co/roadmap) |
+| Research discussion | [forum.research.logos.co](https://forum.research.logos.co) |
 | Eco Dev wiki (open working notes) | [`logos-co/ecosystem`](https://github.com/logos-co/ecosystem) · [ecosystem.logos.co](https://ecosystem.logos.co) |
 | Ideas, needs, desired projects | [ecosystem issues](https://github.com/logos-co/ecosystem/issues) |
 | Testnet v0.1 scope | [roadmap.logos.co/testnets/v01](https://roadmap.logos.co/testnets/v01) |
@@ -188,8 +223,8 @@ departure from it — and genuinely good reading in its own right.
 | 1997 | **The Cathedral and the Bazaar** | Eric Raymond's essay. The collaboration model Session 2 describes. |
 | 1999 | **Napster** | Proved people would share peer-to-peer. Died because a central index is a single address for a court order. |
 | 2000 | **Gnutella** | Removed the index in response — and discovered fully naive decentralisation doesn't scale. |
-| 2000 | **Freenet** | Censorship-resistant publishing built explicitly for dissidents. Cryptography held up; usability didn't. |
-| 2001 | **BitTorrent** | Got the balance right, still with us. Never solved permanence — files die when seeding stops. |
+| 2000 | **Freenet** | Censorship-resistant publishing built explicitly for dissidents, with plausible deniability for the nodes carrying it. Cryptography held up; usability didn't. Logos Storage is now pulling on exactly this thread. |
+| 2001 | **BitTorrent** | Got the balance right, still with us. Never solved permanence — files die when seeding stops, which Logos Storage's organic replication does not fix either. Its stated performance target is "as good as BitTorrent over Tor". |
 | 2002 | **Kademlia** | The distributed hash table that survived the academic wave. It's the peer discovery in Logos Blockchain today. |
 | 2002 | **Tor** | Chaum's mix networks, shipped and actually used by the people who needed them. Two Logos efforts descend from the same idea: libp2p-mix in Messaging, and Blend in the blockchain. |
 | 2008 | **Bitcoin** | Solved open-membership consensus. Made one trade — a permanently public ledger — that Logos Blockchain is trying to undo. |
@@ -206,9 +241,9 @@ Useful to hand over, because it stops people bouncing off the wrong entry point.
 
 | Layer | Where it's at |
 |---|---|
-| **Messaging** | Most mature by a distance. Years of running network behind it. Start here if you want something that works today. |
-| **Storage** | Network and module both real. Long-term persistence economics still being settled on testnet. |
-| **Basecamp** | Works, downloadable, genuinely runs. Early: small catalogue, sharp edges in developer experience. |
+| **Messaging** | Most mature by a distance. Years of running network behind it; Android and iOS builds repaired and under CI this summer. Start here if you want something that works today. Chat is in beta; group messaging (de-MLS) and the λAccount identity primitive are in review. |
+| **Storage** | Changed direction in Jan 2026: the paid-storage marketplace and proving code were removed, and the focus is now privacy-preserving filesharing. Sharing works and ships (module v2.1.x). The anonymity layer — publisher and downloader unlinkability over a mix transport — is under active construction; basic transfers working as of Aug 2026, hidden services still at spec stage. |
+| **Basecamp** | Works, downloadable, genuinely runs. Early: small catalogue, sharp edges in developer experience. The permission model — human-approved signing, declared app-to-app intents, signed packages — is being actively hardened right now, which is to say holes are being found and closed. |
 | **Blockchain** | Testnet v0.1. Real software, no real money, fast-moving, docs in draft. Great to experiment on, not to depend on. |
 | **Docs** | Actively being built. Several guides carry explicit "early draft" banners; the headless-node guide is closer to a placeholder. Following one and reporting where it broke is a requested contribution. |
 

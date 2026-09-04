@@ -7,22 +7,24 @@
 
 ## Run of show
 
-| Time | Section | Notes |
-|------|---------|-------|
-| 0–5' | [Three ancient needs](#three-ancient-needs) | The framing. Everything hangs off it. *(Three historical examples — drop to one if running long.)* |
-| 5–11' | [Messaging](#messaging) | *("Two things being built on top" cuts first.)* |
-| 11–15' | [Storage](#storage) | |
-| 15–19' | [Blockchain](#blockchain) | Densest section. *(Zones/LEZ detail cuts first.)* |
-| 19–24' | [Basecamp](#basecamp) | The "where a human touches it" answer. |
-| 24–27' | [Running a node](#running-a-node) | Shape, not steps. *(cut to 1' if needed)* |
+This document is now the **source of truth for the e-learning**, and reads at roughly 39
+minutes. That's deliberate — it's easier to cut a rich text than to pad a thin one — but it
+means the live 30-minute session is a *cut* of this, not a reading of it.
+
+**The 30-minute live cut.** Take these, in these proportions:
+
+| Time | Section | Take |
+|------|---------|------|
+| 0–4' | [Three ancient needs](#three-ancient-needs) | Napster and DigiNotar only. Drop the Usenet/email paragraph — messaging re-tells it better. |
+| 4–9' | [Messaging](#messaging) | Full, but compress *Two things being built on top* to its closing box. |
+| 9–14' | [Storage](#storage) | Full. This is the section that changed most, and unlinkability is the strongest single idea in the talk. |
+| 14–18' | [Blockchain](#blockchain) | Drop the Zones/LEZ paragraph and the post-quantum aside. |
+| 18–24' | [Basecamp](#basecamp) | Full, including the permission model — it's what makes "install this" a reasonable ask. |
+| 24–27' | [Running a node](#running-a-node) | One line per sense of the phrase, then the Raspberry Pi fact. |
 | 27–30' | [Where to go next](#tools-and-resources) | Never cut. This is the whole point. |
 
-> **Running long?** Read verbatim this is a full 30 minutes with no pauses, which means it
-> is over budget in a real room. The intended trims, in order: cut *Two things being built
-> on top* down to its final box, which carries the point on its own; drop the Usenet/email
-> example from the framing and keep Napster and DigiNotar (they land hardest); cut the
-> Zones/LEZ paragraph from Blockchain; compress *Running a node* to one line per sense of
-> the phrase. Do not cut the closing pointers.
+**What the full text is for:** the e-learning, the handout, and your own confidence — the
+detail you don't say is the detail that lets you answer the question afterwards.
 
 **Learning outcomes.** By the end, a participant can (1) name the four pieces and say what
 each is *for*, in their own words; (2) explain why they are separate things rather than one
@@ -81,6 +83,11 @@ couldn't guarantee without incentives, to trust it couldn't establish without a 
 | Archive | Nothing keeping it alive once attention moved on | **Logos Storage** |
 | Reach consensus | Never attempted without a hierarchy | **Logos Blockchain** |
 | *(and: be usable)* | Every one of them, honestly | **Logos Basecamp** |
+
+One caveat on the second row, because it would be easy to oversell: Logos Storage's current
+answer is about *who can see what you publish and fetch*, not about permanence. Keeping
+things alive when attention moves on is, genuinely, still unsolved — by them and by
+everybody else. More on that below.
 
 The fourth row is not an ancient need — it's the honest admission that the first three are
 plumbing. Plumbing nobody can install is a research project. And "too hard to use" is a
@@ -180,9 +187,16 @@ Both are live work rather than finished products, and each closes a gap named ab
 **libchat** is the secure messaging layer — the answer to "so who does the content
 encryption, then?" Rather than every application inventing its own, libchat handles
 identity, *introduction bundles* (how two people who have never met bootstrap an encrypted
-conversation), private one-to-one conversations, and delivery acknowledgements. It already
-exists as a Basecamp module with a reference chat UI, which means an app can have real
-private messaging by calling it, rather than by hiring a cryptographer and hoping.
+conversation), private conversations, and delivery acknowledgements. It already exists as a
+Basecamp module with a reference chat UI, so an app can have real private messaging by
+calling it rather than by hiring a cryptographer and hoping. Chat is in beta.
+
+Two pieces are landing on top of it that matter for organising specifically. **Group**
+messaging is being built on de-MLS, a decentralised take on the standard the rest of the
+industry is converging on for encrypted group chat — which is the difference between secure
+one-to-one conversations and a secure *organisation*. And an identity primitive called
+λAccount is in review, which is what lets an account be a durable thing you own rather than
+a handle issued to you.
 
 **libp2p-mix** pushes mixing down into the transport itself. Logos Messaging already hides
 who is talking to whom from any single observer. A mixnet goes further: each message is
@@ -205,7 +219,12 @@ Testnet v0.1 includes a mix push-message app and an AnonComms demo app to exerci
 >
 > This is the most mature layer in the stack by a wide margin — it is the continuation of
 > the Waku project, with years of running network behind it, and it is already carrying real
-> traffic. If you want something that works today, start here.
+> traffic. If you want something that works today, start here. Mobile builds for Android and
+> iOS were repaired and put under CI this summer, which matters if what you're imagining runs
+> on phones.
+>
+> The two additions above are genuinely in progress rather than done. Mix is furthest along
+> on the storage side; group messaging and the identity work are in review and simulation.
 
 **Where to go next:** [`logos-messaging/logos-delivery`](https://github.com/logos-messaging/logos-delivery)
 is the node implementation, and inside Basecamp it appears as the **Delivery module**, which
@@ -218,63 +237,77 @@ from Basecamp as the **ChatSDK module**. The mix protocol is part of
 
 ## Storage
 
-Logos Storage is the archive layer — the answer to "and where does the thing actually live?"
-It is the continuation of the Codex project, and it does something more specific than
-"decentralised Dropbox".
+Logos Storage is the publish-and-share layer, and it's worth being precise about what it is,
+because it changed direction at the start of this year.
 
-When you put a file in, it isn't handed to one machine to look after. It's split into pieces
-with **erasure coding**, which means redundancy that is cleverer than making copies: a file
-is expanded into a set of fragments such that any sufficiently large subset can rebuild the
-whole thing. Lose a third of the fragments and the file is still perfectly intact. Spread
-those fragments across unrelated machines in unrelated jurisdictions and there is no single
-door for anyone to knock on.
+It began as Codex, a decentralised storage network in the conventional sense: you paid
+providers to hold your data and they periodically proved they still had it. In January 2026
+that model was deliberately taken out — the marketplace and the proving code were removed
+from the codebase, the old design was parked on a branch, and the team's stated focus became
+something narrower and, for this room, a great deal more interesting: **privacy-preserving
+filesharing.** Their own performance target names the ambition precisely — as good as
+running BitTorrent over Tor, without the awkwardness of actually doing that.
 
-The second property is **content addressing**. A file's name is derived from its contents, so
-asking for it is asking for exactly those bytes and nothing else. You can't be served a
-quietly-edited version — the address wouldn't match. For an archive, this is the whole ball
-game: it makes the record tamper-evident by construction rather than by trust.
+**Content addressing.** A file's name is derived from its contents, so asking for it is
+asking for exactly those bytes and nothing else. You can't be served a quietly-edited
+version, because the edit produces a different address. The record is tamper-evident by
+construction rather than by trust.
 
-The third is **proofs of durability**, and this is the one that answers BitTorrent. Storage
-providers are periodically challenged to demonstrate they still hold what they claimed to
-hold, and cannot pass the challenge by having deleted it. The difference from a torrent is
-the difference between "this survives as long as somebody cares" and "this survives because
-somebody is accountable for it surviving" — which matters enormously for the things worth
-archiving, because those are frequently the things attention has moved on from.
+**Organic replication.** Availability follows interest: everyone who downloads a file also
+becomes a source of it, so things people care about get more resilient the more they're
+read. The honest flip side, which the project states plainly, is that a file nobody fetches
+can quietly disappear. There are no paid durability guarantees any more — that is exactly
+the part that was removed.
+
+**Unlinkability — where nearly all the current effort is going.** The goal is that neither
+the person who published a file nor the person who fetched it can be linked to it by anyone
+else, *queries included*, and that a node caching content can plausibly deny knowing what
+it's holding. The mechanism is a mix transport: traffic routed through relays in Sphinx-
+format packets so that no observer can match what went in to what came out. In August the
+mix transport reached its first working transfers, and the team is now designing hidden
+services on top of it, studying how Tor tuned its own path selection.
 
 > **What this means for organising**
 >
-> Two use cases, and they're different.
+> The obvious use is publishing that can't be quietly pulled: a report, a dataset, a
+> testimony. Once something is addressed by its contents and spread across the network,
+> taking it down isn't a phone call to a hosting company, and a doctored substitute has a
+> visibly different address.
 >
-> *Publishing that can't be quietly pulled.* A report, a dataset, a piece of evidence, a
-> testimony. Once it's addressed by its content and spread across the network, taking it
-> down is not a phone call to a hosting company — and any attempt to substitute a doctored
-> version produces a different address, visibly.
+> But the property being built now is the one that's harder to get anywhere else, and it's
+> about **reading**, not publishing. In a great many situations the dangerous act is not
+> putting the document out — it's being seen to fetch it. Downloading a banned text, a
+> leaked file, a piece of evidence, is the act that puts a name on a list. Publisher and
+> downloader unlinkability means the network cannot tell who asked for what. Plausible
+> deniability for caching nodes matters for the same reason from the other side: a group can
+> contribute storage to a movement without vouching for everything that passes through it.
 >
-> *An archive that outlives the organisation.* Movements fragment, funding stops, the person
-> with the Google Drive password moves on. Content-addressed storage separates "does this
-> still exist" from "does this particular group still exist".
->
-> The discipline this demands: **encrypt before you upload.** Censorship resistance and
-> confidentiality are different properties, and the first one is the one you're being handed.
-> Something that can't be deleted also can't be un-published if you put the wrong thing in it.
+> Two disciplines this demands. **Encrypt before you upload** — censorship resistance and
+> confidentiality are different properties, and something that can't be deleted also can't
+> be un-published. And treat it as a *sharing* network rather than a vault: with organic
+> replication, keeping something alive means somebody continuing to care about it. It is not
+> yet the place for the only copy of something irreplaceable.
 
 > **Honest status**
 >
-> The storage network exists and the Basecamp module exists. Persistence is ultimately an
-> economic question — data survives because providers are incentivised to keep it — and those
-> incentives are still being worked out on testnet. Treat it today as a capable system to
-> build against, not yet as somewhere to put the only copy of something irreplaceable.
+> The split matters here. The filesharing part works and ships — the Basecamp module is at
+> v2.1.x, with much better NAT traversal and a genuinely simpler onboarding flow, and the
+> tutorials were rewritten this summer to run on modest hardware. The *anonymity* part, which
+> is the reason to be interested, is actively under construction: the mix transport does
+> basic transfers as of August 2026, hidden services are still at the spec and simulation
+> stage. So: usable for sharing today, with the property that makes it matter landing
+> progressively over the coming releases.
 >
-> Worth remembering that Freenet was doing censorship-resistant publishing for dissidents in
-> 2000, and its cryptography largely still stands up. It didn't fail technically. It failed
-> because using it was miserable, which is a real way to fail and the reason Basecamp gets a
-> section of its own.
+> This is the thread Freenet was pulling on in 2000 — censorship-resistant publishing with
+> plausible deniability, built explicitly for dissidents. Its cryptography largely still
+> stands up; it failed because using it was miserable. That is a real way to fail, and it is
+> why Basecamp gets a section of its own.
 
-**Where to go next:** [`logos-storage/logos-storage-nim`](https://github.com/logos-storage/logos-storage-nim)
-for the network; [`logos-co/logos-storage-module`](https://github.com/logos-co/logos-storage-module)
-for the Basecamp module apps call.
-
----
+**Where to go next:** [docs.logos.co/storage](https://docs.logos.co/storage) is the intro and
+tutorials. [`logos-storage/logos-storage-nim`](https://github.com/logos-storage/logos-storage-nim)
+is the node; [`logos-co/logos-storage-module`](https://github.com/logos-co/logos-storage-module)
+is what apps call from Basecamp. The mix path-selection research is public and readable at
+[forum.research.logos.co](https://forum.research.logos.co/t/mix-path-selection/721).
 
 ## Blockchain
 
@@ -331,7 +364,10 @@ produced Tor — applied to block propagation.
 > **Honest status**
 >
 > This is the least mature layer and the fastest-moving. It is on **testnet v0.1** — real
-> software, real running nodes, no real money, and things break. Documentation is explicitly
+> software, real running nodes, no real money, and things break. Recent work has been on
+> making the execution zone's sequencing decentralised (it started out with a single
+> sequencer), on consensus stability, and — worth noting for anyone thinking in decades — on
+> a post-quantum migration strategy for the whole stack. Documentation is explicitly
 > in draft. It is a great place to experiment and a bad place to put anything that matters
 > yet. Say this plainly; the credibility you spend overselling here is spent for good.
 
@@ -368,9 +404,32 @@ what the app does and what the always-on node does.
 
 Modules also *use each other*. A chat app doesn't implement peer-to-peer networking; it
 declares a dependency on the Delivery module and calls it. A file-sharing app doesn't
-implement erasure coding; it calls the Storage module. And the Package Manager module is how
+implement content addressing and peer discovery; it calls the Storage module. And the Package Manager module is how
 new modules arrive — a catalogue you browse and install from inside Basecamp, the way you'd
 install an app on a phone.
+
+### What stops an app doing something you didn't ask for
+
+The obvious question about a system that installs other people's code is what that code is
+then allowed to do. This is where a lot of Basecamp's current engineering effort is going,
+and three of the rules are worth knowing because they're the ones that protect a user rather
+than a developer.
+
+**Modules ask; people decide.** A module can request a signature — to authorise a
+transaction, say — but it cannot produce one. The signing key is derived only when a person
+types the password into an approval screen showing what they're signing, and it's wiped
+before the call returns. There is deliberately no "unlocked" state that a module can take
+advantage of afterwards, which was precisely the hole that got closed this summer.
+
+**Apps can talk to each other, but only along declared lines.** One app can ask another to
+do something, and the request goes through the host, which checks that the caller declared
+that it uses that capability in the first place. An app can't forge a reply to itself, and
+it never gets a handle on whoever answered.
+
+**Permissions have a direction, and packages are signed.** Recent work separated inbound from
+outbound grants — previously, A being allowed to call B silently meant B could call A — and
+tightened package signature checking so a package can't satisfy a pinned identity with a
+signature that doesn't actually verify.
 
 > **What this means for organising**
 >
@@ -386,6 +445,19 @@ install an app on a phone.
 > somebody has to compile. It's a package another group can install, in an app they already
 > have, in a few clicks. That is the difference between a tool your collective uses and a
 > tool a movement uses.
+
+> **On trusting what you install**
+>
+> "Install this module" is a request for trust, and the answer shouldn't have to be "I read
+> the source". A permission model is what lets an app you installed to run a rota be unable
+> to read the app holding your treasury, or to spend from it without a human looking at a
+> screen and agreeing.
+>
+> The honest version too: this is being actively hardened, which means holes are being found.
+> The ones described above were real and were closed within the last few weeks. That is what
+> a security model under development looks like, and it beats silence — but it argues for
+> growing into this as it matures, rather than putting your most sensitive material on it
+> this month.
 
 > **Honest status**
 >
