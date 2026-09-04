@@ -226,7 +226,7 @@ departure from it — and genuinely good reading in its own right.
 | 1981 | **Chaum's mix networks** | The original idea that you can hide *who is talking to whom*, not just what they said. Ancestor of Tor, and of Blend. |
 | 1982 | **SMTP / email** | The great decentralised success — and the cautionary tale. Still open by design; centralised in practice by the economics of spam defence. |
 | 1984 | **FidoNet** | Store-and-forward between dial-up BBSs. Solved intermittent connectivity forty years before anyone said "edge node". |
-| 1993 | **Mosaic / the browser** | The software that turned the internet from a researcher's tool into everyone's. The precedent for what Basecamp is trying to be, and a reminder that usability is a load-bearing property, not a polish item. |
+| 1993 | **Mosaic / the browser** | The software that turned the internet from a researcher's tool into everyone's — proof that usability is load-bearing, not polish. Basecamp copies its shape and explicitly not its trust model: a web app is served by somebody who sees you fetch it, can serve you different code than the auditor saw, and rests on the same certificate hierarchy that failed in 2011. |
 | 1997 | **Hashcash** | Rate limiting without identity, invented for email spam. Direct ancestor of how Logos Messaging limits flooding. |
 | 1997 | **The Cathedral and the Bazaar** | Eric Raymond's essay. The collaboration model Session 2 describes. |
 | 1999 | **Napster** | Proved people would share peer-to-peer. Died because a central index is a single address for a court order. |

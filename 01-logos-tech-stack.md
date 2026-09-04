@@ -401,20 +401,32 @@ path for you.
 Everything above is infrastructure. **Logos Basecamp is the thing you open.**
 
 It is a desktop application, available for Linux and macOS as a single downloadable file,
-and the closest familiar thing is a browser. A browser does very little on its own. What it
-does is safely run code that other people wrote, fetched from wherever you point it, and it
-was the piece of software that turned the internet from something researchers used into
-something everybody used. Basecamp occupies the same position in this stack: it hosts
-modules, keeps them apart from each other, and lets you install more.
+and the closest familiar thing in shape is a browser. A browser does very little on its own;
+what it does is run code that other people wrote, and it was the piece of software that
+turned the internet from something researchers used into something everybody used. That is
+the position Basecamp occupies in this stack. It is worth being clear that the resemblance
+is to the shape and not to the trust model.
 
-The phone comparison is worth making too, but mostly in order to reject half of it. Basecamp
-borrows the useful parts of the phone model - applications are packaged and installed rather
-than compiled, they run with declared permissions, and they ask each other to do things
-through a mechanism that is literally called intents. What it does not borrow is the store.
-There is no company deciding what is allowed to exist, the package manager reads from
-repositories you choose, and packages are signed so you can tell who published one. For a
-stack whose whole argument is about not needing anybody's permission, that difference is not
-a detail.
+The browser's trust model is in fact one of the reasons Basecamp exists at all, rather than
+this being shipped as a set of web apps. A web application is served to you by somebody,
+which means that somebody sees you fetch it, and can serve you different code than they
+served whoever audited it last week. What the browser trusts underneath is the certificate
+authority hierarchy - the same hierarchy that failed in 2011 and was used to read the email
+of Iranian activists. And the browser is where the entire apparatus of tracking,
+fingerprinting and third party surveillance actually lives. It is a poor foundation for
+software whose whole purpose is not being watched.
+
+Basecamp keeps the shape and changes the model. Modules are packages you install and keep,
+rather than code fetched fresh from a server every time you use it. They are signed, so you
+can check who published one and verify it after installation instead of trusting the
+connection that delivered it. They come from repositories you choose. Nothing phones home to
+an origin server while you use the thing you installed.
+
+The phone comparison is the useful one for what happens after installation. Basecamp borrows
+the parts of that model that work - applications are packaged rather than compiled, they run
+in separate processes with declared permissions, and they ask each other to do things
+through a mechanism which is, as on Android, called intents. What it does not borrow is the
+store, or the company that decides what is allowed to exist in it.
 
 A module comes in two halves, and the split is the important idea:
 
