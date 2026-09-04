@@ -160,6 +160,34 @@ interface, CLI and deployment generated.
 
 ---
 
+## The ancestors
+
+Every idea in Session 1 has a lineage, and all of it predates the word "blockchain". Useful
+for anyone who wants to check that this is a continuation of internet history rather than a
+departure from it — and genuinely good reading in its own right.
+
+| Year | Thing | Why it matters here |
+|---|---|---|
+| 1980 | **Usenet** | Decentralised discussion at scale, no owner. Drowned in spam, because an open network with no accounts couldn't say "enough". |
+| 1981 | **Chaum's mix networks** | The original idea that you can hide *who is talking to whom*, not just what they said. Ancestor of Tor, and of Blend. |
+| 1982 | **SMTP / email** | The great decentralised success — and the cautionary tale. Still open by design; centralised in practice by the economics of spam defence. |
+| 1984 | **FidoNet** | Store-and-forward between dial-up BBSs. Solved intermittent connectivity forty years before anyone said "edge node". |
+| 1997 | **Hashcash** | Rate limiting without identity, invented for email spam. Direct ancestor of how Logos Messaging limits flooding. |
+| 1997 | **The Cathedral and the Bazaar** | Eric Raymond's essay. The collaboration model Session 2 describes. |
+| 1999 | **Napster** | Proved people would share peer-to-peer. Died because a central index is a single address for a court order. |
+| 2000 | **Gnutella** | Removed the index in response — and discovered fully naive decentralisation doesn't scale. |
+| 2000 | **Freenet** | Censorship-resistant publishing built explicitly for dissidents. Cryptography held up; usability didn't. |
+| 2001 | **BitTorrent** | Got the balance right, still with us. Never solved permanence — files die when seeding stops. |
+| 2002 | **Kademlia** | The distributed hash table that survived the academic wave. It's the peer discovery in Logos Blockchain today. |
+| 2002 | **Tor** | Chaum's mix networks, shipped and actually used by the people who needed them. |
+| 2008 | **Bitcoin** | Solved open-membership consensus. Made one trade — a permanently public ledger — that Logos Blockchain is trying to undo. |
+| 2011 | **DigiNotar** | A compromised certificate authority used to read ~300,000 Iranians' email. What a trust hierarchy fails like, with activists as the victims. |
+
+The point to carry out of this table: **the ideas aren't new and they weren't wrong.** What
+has changed is that the pieces can now be assembled into something a person can install.
+
+---
+
 ## Maturity, honestly
 
 Useful to hand over, because it stops people bouncing off the wrong entry point.
