@@ -77,9 +77,9 @@ the ecosystem process.
 **Core module** — a Basecamp module that holds logic and has no UI. Runs behind the desktop
 app *and* headless on a server, unchanged.
 
-**Cryptarchia** — Logos Blockchain's Private Proof of Stake consensus. Leadership election
-runs locally on each node; the winner proves in zero knowledge that they won, without
-revealing who they are or what they hold.
+**Cryptarchia** — Logos Blockchain's consensus, built on the Ouroboros proof-of-stake family.
+Its addition: leadership election runs locally on each node, and the winner proves in zero
+knowledge that they won without revealing who they are or what they hold.
 
 **Eco Dev** — Ecosystem Development. The team connecting the technology to the people who
 might use it, in both directions.
@@ -95,6 +95,12 @@ Logos Messaging.
 
 **Lambda Prize (ꟛPrize)** — a prize for hard, ambitious problems where the *solution isn't
 dictated*. You define the approach.
+
+**The giants** — what Logos deliberately doesn't reinvent: Ouroboros for consensus, Solana's
+account model and parallel execution for the execution zone, the RISC Zero zkVM that the
+execution zone proves programs with, libp2p for networking. The claim is not novelty in these; it's that privacy,
+unlinkability, anonymity and self-sovereignty are treated as defaults rather than as
+features somebody can add later.
 
 **de-MLS** — a decentralised take on Messaging Layer Security, the standard the industry is
 converging on for encrypted group chat. Being integrated into libchat; it's what turns secure
@@ -151,8 +157,9 @@ confused, permission to say it isn't ready.
 **RFP** — Request for Proposals. Outsourced development where the requirements are already
 known.
 
-**SPEL** — the framework for writing programs for LEZ. Annotate your logic; get the
-interface, CLI and deployment generated.
+**SPEL** — a developer framework for writing programs for LEZ, sitting on top of the zone
+rather than being part of the protocol. Annotate your logic; get the interface, CLI and
+deployment generated. The zkVM underneath it is LEZ's, not SPEL's.
 
 **Zone** — a lightweight chain on top of Bedrock, where applications actually run.
 
@@ -227,7 +234,8 @@ departure from it — and genuinely good reading in its own right.
 | 2001 | **BitTorrent** | Got the balance right, still with us. Never solved permanence — files die when seeding stops, which Logos Storage's organic replication does not fix either. Its stated performance target is "as good as BitTorrent over Tor". |
 | 2002 | **Kademlia** | The distributed hash table that survived the academic wave. It's the peer discovery in Logos Blockchain today. |
 | 2002 | **Tor** | Chaum's mix networks, shipped and actually used by the people who needed them. Two Logos efforts descend from the same idea: libp2p-mix in Messaging, and Blend in the blockchain. |
-| 2008 | **Bitcoin** | Solved open-membership consensus. Made one trade — a permanently public ledger — that Logos Blockchain is trying to undo. |
+| 2008 | **Bitcoin** | Genuinely solved open-membership consensus. Made one trade — a permanently public ledger — that Logos Blockchain is trying to undo. |
+| 2015 | **Ethereum** | Made that consensus programmable. Same trade on privacy, inherited by almost everything after it. |
 | 2011 | **DigiNotar** | A compromised certificate authority used to read ~300,000 Iranians' email. What a trust hierarchy fails like, with activists as the victims. |
 
 The point to carry out of this table: **the ideas aren't new and they weren't wrong.** What

@@ -7,7 +7,7 @@
 
 ## Run of show
 
-This document is now the **source of truth for the e-learning**, and reads at roughly 39
+This document is now the **source of truth for the e-learning**, and reads at roughly 44
 minutes. That's deliberate — it's easier to cut a rich text than to pad a thin one — but it
 means the live 30-minute session is a *cut* of this, not a reading of it.
 
@@ -63,26 +63,42 @@ where every search is shouted at everybody does not scale. BitTorrent found the 
 is still with us — but it never solved *permanence*. A torrent lives while people seed it
 and dies quietly when they stop. Nothing keeps your thing alive except somebody's goodwill.
 
-**We never really solved agreeing at all.** The internet's actual answers to "who is this"
-and "where does this name point" — the certificate authorities that vouch for websites, and
-the domain name system — were hierarchies from the very beginning. They work, and they are
-chokepoints by design. In 2011 a Dutch certificate authority called DigiNotar was broken
-into and used to issue fraudulent Google certificates, which were used to read the email of
-roughly 300,000 people in Iran. That is not a theoretical risk to activists; that was the
-actual, observed use. Domain seizure, meanwhile, is routine enough to be a standard
-instrument of policy.
+**Agreeing is the one the internet never tried to decentralise.** Its actual answers to "who
+is this" and "where does this name point" - the certificate authorities that vouch for
+websites, and the domain name system - were hierarchies from the very beginning. They work,
+and they are chokepoints by design. In 2011 a Dutch certificate authority called DigiNotar
+was broken into and used to issue fraudulent Google certificates, which were then used to
+read the email of roughly 300,000 people in Iran. That is not a theoretical risk to
+activists, it is the observed use. Domain seizure, meanwhile, is routine enough to be an
+ordinary instrument of policy.
 
-None of those are crypto failures. They are internet failures, from before anyone used the
-word blockchain, and the pattern across all three is identical: the decentralised version
-existed and lost — to spam it couldn't filter without demanding identity, to permanence it
-couldn't guarantee without incentives, to trust it couldn't establish without a hierarchy.
+This third leg has a different ending from the other two, though, and it is worth being
+straight about it rather than overclaiming. Bitcoin did solve open membership consensus in
+2008, and Ethereum made it programmable. That problem is not open, and pretending otherwise
+would be silly. What went unsolved was privacy - both designs put every transaction into a
+permanent, globally readable ledger, and the field has spent the fifteen years since
+treating that as an acceptable cost rather than as a defect.
 
-| Ancient need | Lost to | Logos layer |
+| Ancient need | Where it stands | Logos layer |
 |---|---|---|
-| Communicate | Spam, and the identity required to stop it | **Logos Messaging** |
-| Archive | Nothing keeping it alive once attention moved on | **Logos Storage** |
-| Reach consensus | Never attempted without a hierarchy | **Logos Blockchain** |
-| *(and: be usable)* | Every one of them, honestly | **Logos Basecamp** |
+| Communicate | Decentralised versions lost to spam, and to the identity required to stop it | **Logos Messaging** |
+| Archive | Decentralised versions worked, but nothing kept things alive once attention moved on | **Logos Storage** |
+| Reach consensus | Genuinely solved, in 2008 - with privacy treated as an afterthought | **Logos Blockchain** |
+| *(and: be usable)* | Every one of them struggled here, honestly | **Logos Basecamp** |
+
+Which brings up the thing worth saying plainly about the whole stack, because it is easy to
+mistake for a much bigger claim than it is. Logos is not proposing to reinvent this from
+first principles. Its consensus builds on Ouroboros, the proof of stake family that has been
+studied and deployed for years. The execution zone borrows the account based data model and
+parallel execution that Solana demonstrated at scale. The execution zone proves programs
+using the RISC Zero zkVM. The networking is libp2p, like everybody else's. These are giants, and the stack
+stands on them deliberately rather than apologetically.
+
+What it does insist on is the requirement the field has repeatedly waved off: that privacy,
+unlinkability, anonymity and self-sovereignty are not features to be bolted on afterwards by
+whoever turns out to need them, but properties the protocol has to provide by default, to
+everybody, without being asked. That is the whole thesis, and it is why each of the layers
+below looks slightly unusual compared to its nearest equivalent elsewhere.
 
 One caveat on the second row, because it would be easy to oversell: Logos Storage's current
 answer is about *who can see what you publish and fetch*, not about permanence. Keeping
@@ -305,38 +321,39 @@ is what apps call from Basecamp. The mix path-selection research is public and r
 
 ## Blockchain
 
-This is the one where there was no good earlier answer to point at.
+Logos Blockchain, called Nomos until recently, is the consensus layer, and it is the
+clearest illustration of the point above: very little of it is novel by design, and the
+novelty is deliberately concentrated in one place.
 
-Communicating and archiving both had decentralised versions that worked and were lost.
-Agreeing never had one. When the internet needed to settle "is this really that website"
-or "where does this name point", it built hierarchies — certificate authorities, the domain
-name system — and those hierarchies are exactly the chokepoints that DigiNotar and domain
-seizure exploit. Open-membership consensus, agreement among people who haven't been
-vouched for by anybody, was an unsolved problem until Bitcoin in 2008.
+The consensus protocol is Cryptarchia, which builds on Ouroboros, the proof of stake family
+that has been studied and deployed for years. The execution zone takes the account based
+data model and the parallel execution that Solana demonstrated works at scale, and proves
+program execution with the RISC Zero zkVM, so developers write ordinary Rust rather than
+learning a circuit language. None of these are gambles, and that is the point - the risk
+budget is spent somewhere else.
 
-Bitcoin solved it, and made one trade that has aged badly for this room in particular: it
-put every transaction in a permanent, globally readable, perfectly correlatable ledger.
-Logos Blockchain — the continuation of Nomos — is an attempt to keep the solution and undo
-that trade. Three things distinguish it, and the third matters most here.
+It is arranged in two layers. Bedrock is the base and is kept deliberately minimal,
+providing consensus and data availability. Zones are lightweight chains built on top where
+applications actually run, the first of them being the Logos Execution Zone. The split means
+an application's activity does not congest the base layer, and different communities can run
+zones with different rules while still settling to the same base.
 
-**It has two layers.** *Bedrock* is the base: it provides consensus and data availability,
-and it is deliberately kept minimal. *Zones* are lightweight chains built on top, where
-applications actually run. The first one is the **Logos Execution Zone (LEZ)**. The split
-means an application's activity doesn't have to congest, or be constrained by, the base
-layer — and different communities can run different zones with different rules while
-settling to the same base.
+Where it departs from its ancestors is that privacy is not a mode you opt into. In an
+ordinary proof of stake chain, being selected to propose a block is a public event, so
+everyone can see which validator was chosen and therefore who holds how much stake.
+Cryptarchia runs the leadership election locally on each node, and the winner proves in zero
+knowledge that they legitimately won without revealing which participant they are or how
+much they hold. A layer called Blend then mixes the routing of messages so that a proposer
+cannot be identified by watching where a block first appeared - this is Chaum's 1981 mix
+network idea again, the same lineage that produced Tor, applied to block propagation.
+Proposer anonymity is worthless if the network layer gives you away, so both are needed.
 
-**Consensus is private proof-of-stake.** The protocol is called **Cryptarchia**. In a normal
-proof-of-stake chain, being selected to propose a block is a public event: everyone can see
-which validator was picked, and therefore who holds how much stake. Cryptarchia runs the
-leadership election *locally, on each node*, and the winner proves in zero knowledge that
-they legitimately won — without revealing which participant they are or how much they hold.
-
-**Message routing is mixed.** A layer called **Blend** obscures the path messages take
-through the network, so you can't identify a proposer by watching where a block first
-appeared. Proposer anonymity is worthless if the network layer gives you away, so both are
-needed. This is the mix-network idea David Chaum published in 1981 — the same lineage that
-produced Tor — applied to block propagation.
+The execution zone extends the same principle to applications. Public and private accounts
+partition a single address space, and a program is written once and works across both, with
+the protocol enforcing privacy rather than the developer remembering to ask for it. Most
+privacy-focused chains require you to handle private inputs explicitly inside your
+application logic. Here the accounts look the same to the program, and private execution
+works without the developer doing anything special.
 
 > **What this means for organising**
 >
@@ -344,11 +361,12 @@ produced Tor — applied to block propagation.
 > a vote, a decision record. Today these live with a bank, a platform, or a trusted
 > individual — every one of which is a chokepoint and a liability.
 >
-> But as noted above, the standard blockchain answer has been a bad trade for activists
-> specifically. A permanent, globally readable record of who funded what and who voted how
-> is not a privacy nuisance in much of the world — it's a target list. Plenty of movements
-> have looked at public-ledger governance tools, done that arithmetic correctly, and walked
-> away.
+> The standard blockchain answer has been a bad trade for activists specifically. A
+> permanent, globally readable record of who funded what and who voted how is not a privacy
+> nuisance in much of the world - it is a target list. Plenty of movements have looked at
+> public-ledger governance tools, done that arithmetic correctly, and walked away. That is a
+> reasonable decision about the tools as they have existed, and it is precisely the decision
+> this layer is trying to change.
 >
 > The privacy work above is aimed squarely at that trade. Proposer anonymity means helping
 > secure the network doesn't announce that you're doing it, or how much you hold.
@@ -370,9 +388,10 @@ produced Tor — applied to block propagation.
 for the node, [`logos-blockchain/logos-execution-zone`](https://github.com/logos-blockchain/logos-execution-zone)
 for the zone where apps run, and [roadmap.logos.co/testnets](https://roadmap.logos.co/testnets)
 for what each testnet actually contains, including release notes. Anyone who wants to write a program for LEZ should
-look at [`logos-co/spel`](https://github.com/logos-co/spel) — a framework in the spirit of
-Anchor for Solana, where you annotate your logic and it generates the interface, the CLI and
-the deployment path for you.
+look at [`logos-co/spel`](https://github.com/logos-co/spel). It is a developer framework
+sitting on top of the zone rather than part of the protocol - in the spirit of Anchor for
+Solana, you annotate your logic and it generates the interface, the CLI and the deployment
+path for you.
 
 ---
 
