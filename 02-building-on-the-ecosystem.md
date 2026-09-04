@@ -51,6 +51,17 @@ The practical consequence is that code is released to the public at the same mom
 to the internal team. There is no gated preview tier, no partner-only build. When something
 ships, you have exactly the same access as the people whose job this is.
 
+It goes further than access to code. **Every team publishes a weekly update, in public, at
+[roadmap.logos.co](https://roadmap.logos.co)** — and they are unusually candid ones. They
+name the bug that was found, the design that was abandoned, the assumption that turned out
+wrong. Recent entries include a team removing a large part of their own codebase because
+they'd changed their mind about the direction, and another describing a security hole in
+their own signing code in detail, along with how it was closed.
+
+That is worth pausing on, because it's rare and it's useful to you. You can read what every
+part of this stack did last week, before deciding where to put your effort — and the tone of
+those updates tells you what kind of collaboration is expected.
+
 That's the structure. The part worth actually dwelling on is the culture, and specifically
 three permissions that the Eco Dev team writes down explicitly for itself — and which extend
 to you, because you are doing the same job from outside.
@@ -171,10 +182,15 @@ That fourth stage is the interesting one, because it's a job you can do.
 > process. It has a name and a place in the workflow. It is not you failing to keep up with
 > a document — it is the validation the document requires before it can ship.
 >
-> And the guides genuinely need it. Several currently carry an explicit "this is an early
-> draft and may be incomplete or incorrect" banner. Some are closer to placeholders — the
-> headless-node guide openly lists what it doesn't know yet. Those banners are not
-> embarrassment; they're an invitation with the door left open.
+> And the guides genuinely need it. Several still carry an explicit "this is an early draft
+> and may be incomplete or incorrect" banner. Those banners are not embarrassment; they're an
+> invitation with the door left open.
+>
+> They also get closed. The headless-node guide was, until recently, closer to a placeholder
+> — it openly listed what it didn't yet know. There is now a real node operator guide with
+> pinned versions and commands that run. Storage rewrote all of its tutorials this summer,
+> explicitly so they'd work on modest hardware, after a user described theirs as a "potato
+> PC". That is the loop working: somebody said it was too hard, and it got easier.
 >
 > There is also a specific, slightly odd contribution that matters more than it sounds:
 > documentation is explicitly written to be **readable by AI assistants**, because a large
@@ -207,6 +223,17 @@ The team splits into streams, and knowing which one you're talking to saves ever
 Notice that "builder support (mentorship, technical assistance, solution engineering)" is a
 listed output of the Red Team, not a favour they do when they have time. If you are building
 on Logos, supporting you is somebody's actual job.
+
+### Knowing what to ask about
+
+Before reaching for a person, [roadmap.logos.co](https://roadmap.logos.co) will usually tell
+you whether the thing you need is being worked on, was abandoned, or has never been
+considered — and those three get very different conversations. Each team has its own stream
+of weekly updates, and the deeper research arguments happen in the open at
+[forum.research.logos.co](https://forum.research.logos.co).
+
+It's also the honest answer to "is this project alive?", which is a fair question to ask of
+any young stack and an awkward one to ask a person.
 
 ### How to reach them
 

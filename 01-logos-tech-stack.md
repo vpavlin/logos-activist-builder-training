@@ -206,7 +206,8 @@ can't line up what went in with what came out. This is the 1981 Chaum idea again
 that produced Tor — now being wired directly into the peer-to-peer layer, so that a message
 can be published without the network learning who published it.
 
-Testnet v0.1 includes a mix push-message app and an AnonComms demo app to exercise both.
+Both have shipped further than "planned": as of testnet v0.2.1, chat uses de-MLS for direct
+conversations as well as groups, and the mix work is being exercised by an AnonComms demo.
 
 > **What this means for organising**
 >
@@ -363,8 +364,9 @@ produced Tor — applied to block propagation.
 
 > **Honest status**
 >
-> This is the least mature layer and the fastest-moving. It is on **testnet v0.1** — real
-> software, real running nodes, no real money, and things break. Recent work has been on
+> This is the least mature layer and the fastest-moving. The current release is **testnet
+> v0.2.1**, with v0.3 already scoped — real software, real running nodes, no real money, and
+> things break. Recent work has been on
 > making the execution zone's sequencing decentralised (it started out with a single
 > sequencer), on consensus stability, and — worth noting for anyone thinking in decades — on
 > a post-quantum migration strategy for the whole stack. Documentation is explicitly
@@ -373,8 +375,8 @@ produced Tor — applied to block propagation.
 
 **Where to go next:** [`logos-blockchain/logos-blockchain`](https://github.com/logos-blockchain/logos-blockchain)
 for the node, [`logos-blockchain/logos-execution-zone`](https://github.com/logos-blockchain/logos-execution-zone)
-for the zone where apps run, and [roadmap.logos.co/testnets/v01](https://roadmap.logos.co/testnets/v01)
-for what testnet v0.1 actually contains. Anyone who wants to write a program for LEZ should
+for the zone where apps run, and [roadmap.logos.co/testnets](https://roadmap.logos.co/testnets)
+for what each testnet actually contains, including release notes. Anyone who wants to write a program for LEZ should
 look at [`logos-co/spel`](https://github.com/logos-co/spel) — a framework in the spirit of
 Anchor for Solana, where you annotate your logic and it generates the interface, the CLI and
 the deployment path for you.
@@ -399,7 +401,7 @@ A module comes in two halves, and the split is the important idea:
 The reason to separate them is that the same core module runs in two completely different
 places without changing a line. Behind the desktop UI, when someone is looking at it — and
 standing alone as a **headless** process on a server or a Raspberry Pi, when nobody is,
-under a runtime called `logoscore`. One implementation, two front ends, no drift between
+driven by a command-line tool called `logosctl`. One implementation, two front ends, no drift between
 what the app does and what the always-on node does.
 
 Modules also *use each other*. A chat app doesn't implement peer-to-peer networking; it
@@ -475,54 +477,54 @@ exists to build on.
 
 ## Running a node
 
-"Run a node" is one phrase covering three quite different acts, and conflating them is the
-single most common source of confusion. Separate them explicitly.
+"Run a node" covers three different motivations, and separating them is the single best way
+to stop the conversation getting confused. The good news, as of the current release, is that
+operationally they have converged: **one tool, `logosctl`, runs one Logos node and the
+modules inside it** — blockchain, storage and delivery together, in a single session. There
+is a published node operator guide for testnet v0.2.1 that pins every package version and
+gives copy-paste commands.
 
-**1. Run a blockchain node.** You are participating in consensus — helping produce and
-validate the shared record. The shape of it: download the node binary and the
-zero-knowledge circuit files it needs, run `init` with a couple of bootstrap peers to
-generate your keys and config, then start the node pointed at that config. Ask the testnet
-faucet for tokens, and watch it sync.
+**1. To take part in consensus.** The blockchain module helps produce and validate the
+shared record. This is the one with real requirements: zero-knowledge circuit files, keys,
+bootstrap peers, and patience while it syncs.
 
-The number worth saying out loud: the target hardware is a **Raspberry Pi 5 with about
-64 GB of storage**. Not a datacenter, not a rented server with someone's name on the
-contract. A device on a shelf in a flat, on a normal connection. That is a deliberate design
-goal and it is the most politically significant fact in this session — a network that needs
-a datacenter to participate in is a network that recentralises the moment it matters.
+The number worth saying out loud is the hardware target: a **Raspberry Pi 5 with around
+64 GB of storage**. Not a datacenter, not a rented server with somebody's name on the
+contract — a device on a shelf in a flat, on a normal connection. That is a deliberate design
+goal and it is arguably the most politically significant fact in this session. A network that
+needs a datacenter to participate in is a network that recentralises the moment it matters.
 
-**2. Run messaging or storage infrastructure.** You are not producing blocks; you're
-carrying other people's traffic or holding other people's data. This is the neighbourly
-version: a group that runs a well-connected messaging node is directly making the network
-usable for everyone nearby on a phone. It's the lowest-barrier way to contribute
-infrastructure, and it's underrated.
+**2. To carry other people's traffic.** The delivery and storage modules don't produce
+blocks; they make the network usable for everyone else. This is the neighbourly contribution
+and it's underrated: a group running a well-connected delivery node is directly why somebody
+nearby on a phone can use any of this at all. It's also the lowest-barrier way in.
 
-**3. Run your own always-on peer.** Not for the network — for *you*. Basecamp's modules
-running headless under `logoscore` on a machine that never sleeps, so your group's shared
-state is reachable when the laptops are shut. This is what makes a collaborative tool
-actually work in practice rather than only when two people happen to be online at once.
+**3. To have your own always-on peer.** Not for the network — for you. The same modules
+running on a machine that never sleeps, so your group's shared state is reachable when
+everyone's laptops are shut. This is what makes a collaborative tool work in practice rather
+than only when two people happen to be online simultaneously.
 
 > **What this means for organising**
 >
-> Node operation is the most concrete way to be part of this that doesn't require writing
-> code. A group that runs a node is not a user of the infrastructure — it *is* the
-> infrastructure. And unlike most infrastructure contributions, it's legible: you can point
-> at the box.
+> Node operation is the most concrete way to be part of this that doesn't involve writing
+> code. A group that runs a node isn't a user of the infrastructure — it *is* the
+> infrastructure. And unlike most infrastructure contributions it's legible: you can point at
+> the box.
 >
-> The thing to be candid about is that operating a node is a **commitment**, not a weekend:
-> it wants uptime, updates, a bit of attention when things break, and someone who cares.
-> Better to have five groups who actually maintain a node than fifty who set one up at a
+> Be candid that it's a **commitment** rather than a weekend. It wants uptime, updates, a bit
+> of attention when things break, and somebody who cares whether it's still running. Five
+> groups that actually maintain a node are worth more than fifty that set one up at a
 > workshop and forget it.
 
 > **Honest status**
 >
-> The blockchain node quickstart is published but carries an explicit "early draft, may be
-> incomplete or incorrect" banner. The headless-mode guide is more placeholder than guide
-> right now. Anyone going down this path today should expect to ask questions in Discord
-> rather than follow a document start to finish — and those questions are genuinely wanted,
-> because they're what turns the draft into a guide. Frame it as contributing, not as
-> struggling.
-
----
+> This got substantially better recently and it's worth saying so. Earlier in the year the
+> headless story was genuinely a placeholder — the guide openly listed what it didn't know.
+> There is now a real **node operator guide for testnet v0.2.1** with pinned package
+> versions, the required ports, and commands that run. Expect rough edges, not a void.
+>
+> Two caveats. The published operator guide assumes a Linux host. And testnet means testnet:
+> no real money, and version churn between releases is high — v0.3 is already scoped.
 
 ## Tools and resources
 
@@ -542,8 +544,9 @@ start by changing them, not by starting from scratch. SDKs exist for C++, JavaSc
 and Rust, so this is not a one-language ecosystem.
 
 **If you want to run something:** the [Basecamp releases page](https://github.com/logos-co/logos-basecamp/releases/latest)
-for the desktop app; the [blockchain releases page](https://github.com/logos-blockchain/logos-blockchain/releases)
-for the node binary and its bootstrap peers.
+for the desktop app. For a node, start with the **node operator guide** at
+[roadmap.logos.co/testnets](https://roadmap.logos.co/testnets) — it pins the exact package
+versions for the current testnet, which is the difference between an evening and a weekend.
 
 **If you have an idea and no one to build it with:** that is Session 2, and it's genuinely
 the more important half. Come back for it.
