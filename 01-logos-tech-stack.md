@@ -105,11 +105,12 @@ answer is about *who can see what you publish and fetch*, not about permanence. 
 things alive when attention moves on is, genuinely, still unsolved — by them and by
 everybody else. More on that below.
 
-The fourth row is not an ancient need — it's the honest admission that the first three are
-plumbing. Plumbing nobody can install is a research project. And "too hard to use" is a
-perfectly good cause of death: it's most of why Freenet, built explicitly for dissidents in
+The fourth row is not an ancient need. It is the honest admission that the first three are
+plumbing, and plumbing nobody can install is a research project. "Too hard to use" is a
+perfectly good cause of death: it is most of why Freenet, built explicitly for dissidents in
 2000 and censorship-resistant in ways that still hold up, never reached the people it was
-for. Basecamp is the answer to "and then what does a person actually open?"
+built for. The web had the same problem and the browser solved it, which is the precedent
+worth holding on to - Basecamp is the answer to "and then what does a person actually open?"
 
 > **Worth saying out loud**
 >
@@ -399,9 +400,21 @@ path for you.
 
 Everything above is infrastructure. **Logos Basecamp is the thing you open.**
 
-It's a desktop application — Linux and macOS, downloadable as a single file — and the best
-way to understand it is that it's less like an app and more like a *phone*. It doesn't do
-much on its own. What it does is host **modules**, and let you install more of them.
+It is a desktop application, available for Linux and macOS as a single downloadable file,
+and the closest familiar thing is a browser. A browser does very little on its own. What it
+does is safely run code that other people wrote, fetched from wherever you point it, and it
+was the piece of software that turned the internet from something researchers used into
+something everybody used. Basecamp occupies the same position in this stack: it hosts
+modules, keeps them apart from each other, and lets you install more.
+
+The phone comparison is worth making too, but mostly in order to reject half of it. Basecamp
+borrows the useful parts of the phone model - applications are packaged and installed rather
+than compiled, they run with declared permissions, and they ask each other to do things
+through a mechanism that is literally called intents. What it does not borrow is the store.
+There is no company deciding what is allowed to exist, the package manager reads from
+repositories you choose, and packages are signed so you can tell who published one. For a
+stack whose whole argument is about not needing anybody's permission, that difference is not
+a detail.
 
 A module comes in two halves, and the split is the important idea:
 
