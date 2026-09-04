@@ -10,18 +10,19 @@
 | Time | Section | Notes |
 |------|---------|-------|
 | 0–5' | [Three ancient needs](#three-ancient-needs) | The framing. Everything hangs off it. *(Three historical examples — drop to one if running long.)* |
-| 5–10' | [Messaging](#messaging) | |
-| 10–14' | [Storage](#storage) | |
-| 14–19' | [Blockchain](#blockchain) | Densest section. *(Zones/LEZ detail cuts first.)* |
+| 5–11' | [Messaging](#messaging) | *("Two things being built on top" cuts first.)* |
+| 11–15' | [Storage](#storage) | |
+| 15–19' | [Blockchain](#blockchain) | Densest section. *(Zones/LEZ detail cuts first.)* |
 | 19–24' | [Basecamp](#basecamp) | The "where a human touches it" answer. |
 | 24–27' | [Running a node](#running-a-node) | Shape, not steps. *(cut to 1' if needed)* |
 | 27–30' | [Where to go next](#tools-and-resources) | Never cut. This is the whole point. |
 
 > **Running long?** Read verbatim this is a full 30 minutes with no pauses, which means it
-> is over budget in a real room. The intended trims, in order: drop the Usenet/email example
-> from the framing and keep Napster and DigiNotar (they're the two that land hardest); cut
-> the Zones/LEZ paragraph from Blockchain; compress *Running a node* to the three-sentence
-> version — one line per sense of the phrase. Do not cut the closing pointers.
+> is over budget in a real room. The intended trims, in order: cut *Two things being built
+> on top* down to its final box, which carries the point on its own; drop the Usenet/email
+> example from the framing and keep Napster and DigiNotar (they land hardest); cut the
+> Zones/LEZ paragraph from Blockchain; compress *Running a node* to one line per sense of
+> the phrase. Do not cut the closing pointers.
 
 **Learning outcomes.** By the end, a participant can (1) name the four pieces and say what
 each is *for*, in their own words; (2) explain why they are separate things rather than one
@@ -168,8 +169,37 @@ cannot see faces.
 > **transport-level** privacy: it protects the *pattern* — who talks to whom, when, from
 > where. It is not, by itself, an end-to-end encrypted messenger, it has no notion of your
 > identity, and it will happily carry a plaintext message if the app on top asks it to.
-> Encryption of the *content* is the application's job. Logos Messaging's contribution is
-> that the network can't build a social graph out of you.
+> Encryption of the *content* is a separate job — see the next section for who is taking it
+> on. Logos Messaging's own contribution is that the network can't build a social graph
+> out of you.
+
+### Two things being built on top
+
+Both are live work rather than finished products, and each closes a gap named above.
+
+**libchat** is the secure messaging layer — the answer to "so who does the content
+encryption, then?" Rather than every application inventing its own, libchat handles
+identity, *introduction bundles* (how two people who have never met bootstrap an encrypted
+conversation), private one-to-one conversations, and delivery acknowledgements. It already
+exists as a Basecamp module with a reference chat UI, which means an app can have real
+private messaging by calling it, rather than by hiring a cryptographer and hoping.
+
+**libp2p-mix** pushes mixing down into the transport itself. Logos Messaging already hides
+who is talking to whom from any single observer. A mixnet goes further: each message is
+routed through a pool of relays that each peel off one layer of encryption and hold the
+message briefly before passing it on, so that even somebody watching the whole network
+can't line up what went in with what came out. This is the 1981 Chaum idea again — the one
+that produced Tor — now being wired directly into the peer-to-peer layer, so that a message
+can be published without the network learning who published it.
+
+Testnet v0.1 includes a mix push-message app and an AnonComms demo app to exercise both.
+
+> **What this means for organising**
+>
+> Take them together and you get the property most people actually mean when they say
+> "secure" — not merely that the contents are unreadable, but that the conversation is
+> unobservable. Content encryption on its own still leaves a pattern of who contacted whom
+> and when, and in the situations that matter, the pattern is frequently the evidence.
 
 > **Honest status**
 >
@@ -178,8 +208,11 @@ cannot see faces.
 > traffic. If you want something that works today, start here.
 
 **Where to go next:** [`logos-messaging/logos-delivery`](https://github.com/logos-messaging/logos-delivery)
-is the node implementation. Inside Basecamp it appears as the **Delivery module**, which
-apps call rather than speaking the protocol themselves.
+is the node implementation, and inside Basecamp it appears as the **Delivery module**, which
+apps call rather than speaking the protocol themselves. libchat lives at
+[`logos-messaging/logos-chat`](https://github.com/logos-messaging/logos-chat), reachable
+from Basecamp as the **ChatSDK module**. The mix protocol is part of
+[`vacp2p/nim-libp2p`](https://github.com/vacp2p/nim-libp2p).
 
 ---
 

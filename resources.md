@@ -86,6 +86,16 @@ Logos Messaging.
 **Lambda Prize (ꟛPrize)** — a prize for hard, ambitious problems where the *solution isn't
 dictated*. You define the approach.
 
+**libchat** — the secure messaging layer built on Logos Messaging: identity,
+introduction bundles, private one-to-one conversations, delivery acknowledgements.
+Reachable in Basecamp as the ChatSDK module. Content encryption, so every app doesn't
+have to invent its own.
+
+**libp2p-mix** — mixnet routing being wired into the peer-to-peer layer. Messages hop
+through a pool of relays that each peel one layer of encryption and hold the message
+briefly, so a network-wide observer can't match what went in to what came out. Chaum's
+1981 idea, same lineage as Tor.
+
 **LEE** — Logos Execution Environment. The machinery inside LEZ that provides the
 public/private account split. You'll see LEE and LEZ used close together: roughly, LEE is
 the capability, LEZ is the chain that offers it.
@@ -124,6 +134,8 @@ interface, CLI and deployment generated.
 | | Repo |
 |---|---|
 | Messaging | [`logos-messaging/logos-delivery`](https://github.com/logos-messaging/logos-delivery) |
+| Messaging — secure chat layer (libchat) | [`logos-messaging/logos-chat`](https://github.com/logos-messaging/logos-chat) |
+| Messaging — mix protocol (libp2p-mix) | [`vacp2p/nim-libp2p`](https://github.com/vacp2p/nim-libp2p) |
 | Storage | [`logos-storage/logos-storage-nim`](https://github.com/logos-storage/logos-storage-nim) |
 | Blockchain | [`logos-blockchain/logos-blockchain`](https://github.com/logos-blockchain/logos-blockchain) |
 | Execution Zone | [`logos-blockchain/logos-execution-zone`](https://github.com/logos-blockchain/logos-execution-zone) |
@@ -179,7 +191,7 @@ departure from it — and genuinely good reading in its own right.
 | 2000 | **Freenet** | Censorship-resistant publishing built explicitly for dissidents. Cryptography held up; usability didn't. |
 | 2001 | **BitTorrent** | Got the balance right, still with us. Never solved permanence — files die when seeding stops. |
 | 2002 | **Kademlia** | The distributed hash table that survived the academic wave. It's the peer discovery in Logos Blockchain today. |
-| 2002 | **Tor** | Chaum's mix networks, shipped and actually used by the people who needed them. |
+| 2002 | **Tor** | Chaum's mix networks, shipped and actually used by the people who needed them. Two Logos efforts descend from the same idea: libp2p-mix in Messaging, and Blend in the blockchain. |
 | 2008 | **Bitcoin** | Solved open-membership consensus. Made one trade — a permanently public ledger — that Logos Blockchain is trying to undo. |
 | 2011 | **DigiNotar** | A compromised certificate authority used to read ~300,000 Iranians' email. What a trust hierarchy fails like, with activists as the victims. |
 
