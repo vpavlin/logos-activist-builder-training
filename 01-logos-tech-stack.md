@@ -238,35 +238,28 @@ from Basecamp as the **ChatSDK module**. The mix protocol is part of
 
 ## Storage
 
-Logos Storage is the publish-and-share layer, and it's worth being precise about what it is,
-because it changed direction at the start of this year.
+Logos Storage is a filesharing protocol which allows anyone running the Logos stack to
+publish a file and anyone else to fetch it, without a server in between and without either
+of them being identifiable. It began as Codex, a decentralised storage network in the
+conventional sense, where you paid providers to hold your data and they periodically proved
+that they still had it. That model was removed from the codebase in January 2026 and the
+project refocused on privacy preserving filesharing, which is a narrower goal and a
+considerably harder one.
 
-It began as Codex, a decentralised storage network in the conventional sense: you paid
-providers to hold your data and they periodically proved they still had it. In January 2026
-that model was deliberately taken out — the marketplace and the proving code were removed
-from the codebase, the old design was parked on a branch, and the team's stated focus became
-something narrower and, for this room, a great deal more interesting: **privacy-preserving
-filesharing.** Their own performance target names the ambition precisely — as good as
-running BitTorrent over Tor, without the awkwardness of actually doing that.
+Files are content addressed, so a file's name is derived from its bytes, and asking for it
+by name means asking for exactly those bytes and nothing else. Availability comes from
+interest rather than from payment - everyone who downloads a file also becomes a source of
+it, so the things people actually read become more resilient the more they are read. It is
+important to be blunt about the other side of this: there are no durability guarantees any
+more, and a file nobody fetches can quietly disappear.
 
-**Content addressing.** A file's name is derived from its contents, so asking for it is
-asking for exactly those bytes and nothing else. You can't be served a quietly-edited
-version, because the edit produces a different address. The record is tamper-evident by
-construction rather than by trust.
-
-**Organic replication.** Availability follows interest: everyone who downloads a file also
-becomes a source of it, so things people care about get more resilient the more they're
-read. The honest flip side, which the project states plainly, is that a file nobody fetches
-can quietly disappear. There are no paid durability guarantees any more — that is exactly
-the part that was removed.
-
-**Unlinkability — where nearly all the current effort is going.** The goal is that neither
-the person who published a file nor the person who fetched it can be linked to it by anyone
-else, *queries included*, and that a node caching content can plausibly deny knowing what
-it's holding. The mechanism is a mix transport: traffic routed through relays in Sphinx-
-format packets so that no observer can match what went in to what came out. In August the
-mix transport reached its first working transfers, and the team is now designing hidden
-services on top of it, studying how Tor tuned its own path selection.
+Most of the current effort goes into unlinkability. The goal is that neither the publisher
+nor the downloader of a file can be linked to it by anybody else, queries included, and that
+a node caching content can plausibly deny knowing what it is holding. This is achieved by
+routing traffic through a mix network in Sphinx format packets, so that an observer watching
+the network cannot match what went in with what came out. The team's own benchmark is that
+downloading this way should perform about as well as running BitTorrent over Tor, and they
+are now designing hidden services on the same transport.
 
 > **What this means for organising**
 >
