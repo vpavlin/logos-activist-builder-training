@@ -15,7 +15,7 @@ means the live 30-minute session is a *cut* of this, not a reading of it.
 
 | Time | Section | Take |
 |------|---------|------|
-| 0–4' | [Three ancient needs](#three-ancient-needs) | Napster and DigiNotar only. Drop the Usenet/email paragraph — messaging re-tells it better. |
+| 0–4' | [Three ancient needs](#three-ancient-needs) | Keep BitTorrent and the giants passage. Drop the Usenet/email paragraph — messaging re-tells it better. |
 | 4–9' | [Messaging](#messaging) | Full, but compress *Two things being built on top* to its closing box. |
 | 9–14' | [Storage](#storage) | Full. This is the section that changed most, and unlinkability is the strongest single idea in the talk. |
 | 14–18' | [Blockchain](#blockchain) | Drop the Zones/LEZ paragraph and the post-quantum aside. |
@@ -64,21 +64,14 @@ people you must announce yourself to them. That is why filesharing enforcement h
 been to join the swarm and note who is in it, and why so many people have had a letter about
 something they downloaded.
 
-**Agreeing is the one the internet never tried to decentralise.** Its actual answers to "who
-is this" and "where does this name point" - the certificate authorities that vouch for
-websites, and the domain name system - were hierarchies from the very beginning. They work,
-and they are chokepoints by design. In 2011 a Dutch certificate authority called DigiNotar
-was broken into and used to issue fraudulent Google certificates, which were then used to
-read the email of roughly 300,000 people in Iran. That is not a theoretical risk to
-activists, it is the observed use. Domain seizure, meanwhile, is routine enough to be an
-ordinary instrument of policy.
-
-This third leg has a different ending from the other two, though, and it is worth being
-straight about it rather than overclaiming. Bitcoin did solve open membership consensus in
-2008, and Ethereum made it programmable. That problem is not open, and pretending otherwise
-would be silly. What went unsolved was privacy - both designs put every transaction into a
+**Agreeing is the one the internet never decentralised at all.** The things a group needs to
+agree on - who is a member, where the money is, what was decided - have always been held by
+a bank, a platform, or a trusted person with a spreadsheet. Every one of those is a
+chokepoint and every one can be leaned on. Bitcoin did solve open membership consensus in
+2008 and Ethereum made it programmable, so unlike the other two legs, that problem is
+genuinely closed. What went unsolved was privacy: both put every transaction into a
 permanent, globally readable ledger, and the field has spent the fifteen years since
-treating that as an acceptable cost rather than as a defect.
+treating that as a cost of doing business rather than a defect.
 
 | Ancient need | Where it stands | Logos layer |
 |---|---|---|
@@ -414,8 +407,10 @@ The browser's trust model is in fact one of the reasons Basecamp exists at all, 
 this being shipped as a set of web apps. A web application is served to you by somebody,
 which means that somebody sees you fetch it, and can serve you different code than they
 served whoever audited it last week. What the browser trusts underneath is the certificate
-authority hierarchy - the same hierarchy that failed in 2011 and was used to read the email
-of Iranian activists. And the browser is where the entire apparatus of tracking,
+authority hierarchy: a few hundred organisations, any one of which can vouch for any site.
+In 2011 one of them, a Dutch company called DigiNotar, was broken into and used to issue
+fraudulent Google certificates, which were then used to read the email of roughly 300,000
+people in Iran. And the browser is where the entire apparatus of tracking,
 fingerprinting and third party surveillance actually lives. It is a poor foundation for
 software whose whole purpose is not being watched.
 

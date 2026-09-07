@@ -237,7 +237,7 @@ departure from it — and genuinely good reading in its own right.
 | 2002 | **Tor** | Chaum's mix networks, shipped and actually used by the people who needed them. Two Logos efforts descend from the same idea: libp2p-mix in Messaging, and Blend in the blockchain. |
 | 2008 | **Bitcoin** | Genuinely solved open-membership consensus. Made one trade — a permanently public ledger — that Logos Blockchain is trying to undo. |
 | 2015 | **Ethereum** | Made that consensus programmable. Same trade on privacy, inherited by almost everything after it. |
-| 2011 | **DigiNotar** | A compromised certificate authority used to read ~300,000 Iranians' email. What a trust hierarchy fails like, with activists as the victims. |
+| 2011 | **DigiNotar** | A compromised certificate authority used to read ~300,000 Iranians' email. What a trust hierarchy fails like, with activists as the victims — and the reason Basecamp doesn't inherit the browser's trust model. Logos does not replace the CA system; this is about why apps aren't shipped as web pages. |
 
 The point to carry out of this table: **the ideas aren't new and they weren't wrong.** What
 has changed is that the pieces can now be assembled into something a person can install.
