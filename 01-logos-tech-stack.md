@@ -80,13 +80,12 @@ treating that as a cost of doing business rather than a defect.
 | Reach consensus | Genuinely solved, in 2008 - with privacy treated as an afterthought | **Logos Blockchain** |
 | *(and: be usable)* | Every one of them struggled here, honestly | **Logos Basecamp** |
 
-Which brings up the thing worth saying plainly about the whole stack, because it is easy to
-mistake for a much bigger claim than it is. Logos is not proposing to reinvent this from
-first principles. Its consensus builds on Ouroboros, the proof of stake family that has been
+It is worth being precise about the size of the claim here. Logos is not reinventing any of
+this from first principles. Its consensus builds on Ouroboros, the proof of stake family
 studied and deployed for years. The execution zone borrows the account based data model and
-parallel execution that Solana demonstrated at scale. The execution zone proves programs
-using the RISC Zero zkVM. The networking is libp2p, like everybody else's. These are giants, and the stack
-stands on them deliberately rather than apologetically.
+parallel execution that Solana showed works at scale, and proves programs with the RISC Zero
+zkVM. The networking is libp2p, like everybody else's. None of that is novel, and none of it
+is meant to be.
 
 What it does insist on is the requirement the field has repeatedly waved off: that privacy,
 unlinkability, anonymity and self-sovereignty are not features to be bolted on afterwards by
