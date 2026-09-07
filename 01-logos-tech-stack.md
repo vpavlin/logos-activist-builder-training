@@ -86,9 +86,10 @@ borrows the account model and parallel execution that Solana showed works at sca
 proves programs with the RISC Zero zkVM. The networking is libp2p, like everybody else's.
 The foundations are borrowed on purpose, so that the new work can go where it is needed.
 
-That new work is real, and it is concentrated in one place: privacy, unlinkability,
-anonymity and self-sovereignty. The field has treated these as features to be added later,
-by whoever turns out to need them. Here they are properties the protocol provides by
+That new work is real: privacy, unlinkability, anonymity and self-sovereignty - and
+scalability, because privacy that only works for a few thousand people is a demonstration
+rather than infrastructure. The field has treated the first four as features to be added
+later, by whoever turns out to need them. Here they are properties the protocol provides by
 default, to everybody, without being asked. That is the thesis, and it is why each layer
 below looks different from its nearest equivalent elsewhere.
 
