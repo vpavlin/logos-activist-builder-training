@@ -232,7 +232,7 @@ departure from it — and genuinely good reading in its own right.
 | 1999 | **Napster** | Proved people would share peer-to-peer. Died because a central index is a single address for a court order. |
 | 2000 | **Gnutella** | Removed the index in response — and discovered fully naive decentralisation doesn't scale. |
 | 2000 | **Freenet** | Censorship-resistant publishing built explicitly for dissidents, with plausible deniability for the nodes carrying it. Cryptography held up; usability didn't. Logos Storage is now pulling on exactly this thread. |
-| 2001 | **BitTorrent** | Got the balance right, still with us. Never solved permanence — files die when seeding stops, which Logos Storage's organic replication does not fix either. Its stated performance target is "as good as BitTorrent over Tor". |
+| 2001 | **BitTorrent** | Got the balance right, still with us — and has no privacy by construction. A swarm is public: to download you announce yourself, so everyone sees everyone. That is how filesharing enforcement has worked for twenty years. Logos Storage targets exactly this gap; its stated benchmark is "as good as BitTorrent over Tor". (Neither solves permanence.) |
 | 2002 | **Kademlia** | The distributed hash table that survived the academic wave. It's the peer discovery in Logos Blockchain today. |
 | 2002 | **Tor** | Chaum's mix networks, shipped and actually used by the people who needed them. Two Logos efforts descend from the same idea: libp2p-mix in Messaging, and Blend in the blockchain. |
 | 2008 | **Bitcoin** | Genuinely solved open-membership consensus. Made one trade — a permanently public ledger — that Logos Blockchain is trying to undo. |

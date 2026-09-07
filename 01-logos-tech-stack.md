@@ -60,8 +60,13 @@ people would share files directly with one another. It had one weakness: a centr
 which turned out to be a single address at which to serve a court order. Gnutella answered
 that within a year by removing the index altogether, and promptly discovered that a network
 where every search is shouted at everybody does not scale. BitTorrent found the balance and
-is still with us — but it never solved *permanence*. A torrent lives while people seed it
-and dies quietly when they stop. Nothing keeps your thing alive except somebody's goodwill.
+is still with us, which makes it the interesting one - because what it never had was any
+privacy at all. A swarm is public by construction: to download from people you must first
+announce yourself to them, so every participant can see the address of every other. This is
+not a bug that went unfixed, it is how the design works, and it is why the standard
+enforcement technique against filesharing for the past twenty years has simply been to join
+the swarm and write down who is in it. Millions of people have received a letter about
+something they downloaded, and that is the mechanism.
 
 **Agreeing is the one the internet never tried to decentralise.** Its actual answers to "who
 is this" and "where does this name point" - the certificate authorities that vouch for
@@ -82,7 +87,7 @@ treating that as an acceptable cost rather than as a defect.
 | Ancient need | Where it stands | Logos layer |
 |---|---|---|
 | Communicate | Decentralised versions lost to spam, and to the identity required to stop it | **Logos Messaging** |
-| Archive | Decentralised versions worked, but nothing kept things alive once attention moved on | **Logos Storage** |
+| Archive | Decentralised versions worked - and made every participant visible to every other | **Logos Storage** |
 | Reach consensus | Genuinely solved, in 2008 - with privacy treated as an afterthought | **Logos Blockchain** |
 | *(and: be usable)* | Every one of them struggled here, honestly | **Logos Basecamp** |
 
@@ -100,10 +105,10 @@ whoever turns out to need them, but properties the protocol has to provide by de
 everybody, without being asked. That is the whole thesis, and it is why each of the layers
 below looks slightly unusual compared to its nearest equivalent elsewhere.
 
-One caveat on the second row, because it would be easy to oversell: Logos Storage's current
-answer is about *who can see what you publish and fetch*, not about permanence. Keeping
-things alive when attention moves on is, genuinely, still unsolved — by them and by
-everybody else. More on that below.
+One caveat on the second row before anybody gets ahead of themselves. Logos Storage is
+aiming at the privacy that filesharing never had; it is not aiming at permanence. Keeping
+things alive once attention moves on remains unsolved - by BitTorrent, by Logos Storage, and
+by everybody else - and the section below is blunt about that.
 
 The fourth row is not an ancient need. It is the honest admission that the first three are
 plumbing, and plumbing nobody can install is a research project. "Too hard to use" is a
@@ -274,9 +279,10 @@ Most of the current effort goes into unlinkability. The goal is that neither the
 nor the downloader of a file can be linked to it by anybody else, queries included, and that
 a node caching content can plausibly deny knowing what it is holding. This is achieved by
 routing traffic through a mix network in Sphinx format packets, so that an observer watching
-the network cannot match what went in with what came out. The team's own benchmark is that
-downloading this way should perform about as well as running BitTorrent over Tor, and they
-are now designing hidden services on the same transport.
+the network cannot match what went in with what came out. Their own benchmark names the thing
+people currently resort to: downloading this way should perform about as well as running
+BitTorrent over Tor, without anyone having to assemble that themselves. They are now
+designing hidden services on the same transport.
 
 > **What this means for organising**
 >
@@ -286,9 +292,10 @@ are now designing hidden services on the same transport.
 > visibly different address.
 >
 > But the property being built now is the one that's harder to get anywhere else, and it's
-> about **reading**, not publishing. In a great many situations the dangerous act is not
-> putting the document out — it's being seen to fetch it. Downloading a banned text, a
-> leaked file, a piece of evidence, is the act that puts a name on a list. Publisher and
+> about **reading**, not publishing. The copyright letter is the mild version of a general
+> problem: the dangerous act is often not putting a document out, it is being seen to fetch
+> it. Downloading a banned text or a piece of evidence is what puts a name on a list.
+> Publisher and
 > downloader unlinkability means the network cannot tell who asked for what. Plausible
 > deniability for caching nodes matters for the same reason from the other side: a group can
 > contribute storage to a movement without vouching for everything that passes through it.
