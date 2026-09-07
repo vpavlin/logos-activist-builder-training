@@ -52,7 +52,7 @@ constantly.
 | You'll see | It's now | What it is |
 |---|---|---|
 | Waku | **Logos Messaging** | Peer-to-peer messaging network |
-| Codex | **Logos Storage** | Decentralised, durable storage |
+| Codex | **Logos Storage** | Privacy-preserving filesharing |
 | Nomos | **Logos Blockchain** | Consensus layer (Bedrock + Zones) |
 | Logos App | **Logos Basecamp** | The desktop app that hosts modules |
 

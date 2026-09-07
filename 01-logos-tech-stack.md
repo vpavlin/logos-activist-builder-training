@@ -312,9 +312,8 @@ is what apps call from Basecamp. The mix path-selection research is public and r
 
 ## Blockchain
 
-Logos Blockchain, called Nomos until recently, is the consensus layer, and it is the
-clearest illustration of the point above: very little of it is novel by design, and the
-novelty is deliberately concentrated in one place.
+Logos Blockchain is the consensus layer, and the clearest illustration of the point above:
+the foundations are borrowed, and the new work is concentrated in one place.
 
 The consensus protocol is Cryptarchia, which builds on Ouroboros, the proof of stake family
 that has been studied and deployed for years. The execution zone takes the account based
