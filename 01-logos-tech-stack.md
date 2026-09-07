@@ -80,18 +80,17 @@ treating that as a cost of doing business rather than a defect.
 | Reach consensus | Genuinely solved, in 2008 - with privacy treated as an afterthought | **Logos Blockchain** |
 | *(and: be usable)* | Every one of them struggled here, honestly | **Logos Basecamp** |
 
-It is worth being precise about the size of the claim here. Logos is not reinventing any of
-this from first principles. Its consensus builds on Ouroboros, the proof of stake family
-studied and deployed for years. The execution zone borrows the account based data model and
-parallel execution that Solana showed works at scale, and proves programs with the RISC Zero
-zkVM. The networking is libp2p, like everybody else's. None of that is novel, and none of it
-is meant to be.
+Logos stands on the shoulders of giants, and is open about it. Its consensus builds on
+Ouroboros, a proof of stake family studied and deployed for years. The execution zone
+borrows the account model and parallel execution that Solana showed works at scale, and
+proves programs with the RISC Zero zkVM. The networking is libp2p, like everybody else's.
+The foundations are borrowed on purpose, so that the new work can go where it is needed.
 
-What it does insist on is the requirement the field has repeatedly waved off: that privacy,
-unlinkability, anonymity and self-sovereignty are not features to be bolted on afterwards by
-whoever turns out to need them, but properties the protocol has to provide by default, to
-everybody, without being asked. That is the whole thesis, and it is why each of the layers
-below looks slightly unusual compared to its nearest equivalent elsewhere.
+That new work is real, and it is concentrated in one place: privacy, unlinkability,
+anonymity and self-sovereignty. The field has treated these as features to be added later,
+by whoever turns out to need them. Here they are properties the protocol provides by
+default, to everybody, without being asked. That is the thesis, and it is why each layer
+below looks different from its nearest equivalent elsewhere.
 
 One caveat on the second row before anybody gets ahead of themselves. Logos Storage is
 aiming at the privacy that filesharing never had; it is not aiming at permanence. Keeping
