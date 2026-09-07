@@ -93,10 +93,9 @@ later, by whoever turns out to need them. Here they are properties the protocol 
 default, to everybody, without being asked. That is the thesis, and it is why each layer
 below looks different from its nearest equivalent elsewhere.
 
-One caveat on the second row before anybody gets ahead of themselves. Logos Storage is
-aiming at the privacy that filesharing never had; it is not aiming at permanence. Keeping
-things alive once attention moves on remains unsolved - by BitTorrent, by Logos Storage, and
-by everybody else - and the section below is blunt about that.
+One note on the second row. Logos Storage is working on the privacy that filesharing never
+had, and permanence comes after it. An archive that does not persist is not much of an
+archive, so it has to be solved eventually - it is simply not the thing being built first.
 
 The fourth row is not an ancient need. It is the honest admission that the first three are
 plumbing, and plumbing nobody can install is a research project. "Too hard to use" is a
@@ -260,8 +259,8 @@ Files are content addressed, so a file's name is derived from its bytes, and ask
 by name means asking for exactly those bytes and nothing else. Availability comes from
 interest rather than from payment - everyone who downloads a file also becomes a source of
 it, so the things people actually read become more resilient the more they are read. It is
-important to be blunt about the other side of this: there are no durability guarantees any
-more, and a file nobody fetches can quietly disappear.
+important to be blunt about the other side of this: for now there are no durability
+guarantees, and a file nobody fetches can quietly disappear.
 
 Most of the current effort goes into unlinkability. The goal is that neither the publisher
 nor the downloader of a file can be linked to it by anybody else, queries included, and that
