@@ -251,7 +251,7 @@ Useful to hand over, because it stops people bouncing off the wrong entry point.
 | Layer | Where it's at |
 |---|---|
 | **Messaging** | Most mature by a distance. Years of running network behind it; Android and iOS builds repaired and under CI this summer. Start here if you want something that works today. Chat is in beta; group messaging (de-MLS) and the λAccount identity primitive are in review. |
-| **Storage** | Changed direction in Jan 2026: the paid-storage marketplace and proving code were removed, and the focus is now privacy-preserving filesharing. Sharing works and ships (module v2.1.x). The anonymity layer — publisher and downloader unlinkability over a mix transport — is under active construction; basic transfers working as of Aug 2026, hidden services still at spec stage. |
+| **Storage** | Privacy-preserving filesharing. Sharing works and ships (module v2.1.x). The anonymity layer — publisher and downloader unlinkability over a mix transport — is under active construction: basic transfers working as of Aug 2026, hidden services still at spec stage. Durability guarantees come later. |
 | **Basecamp** | Works, downloadable, genuinely runs. Early: small catalogue, sharp edges in developer experience. The permission model — human-approved signing, declared app-to-app intents, signed packages — is being actively hardened right now, which is to say holes are being found and closed. |
 | **Blockchain** | Testnet v0.1. Real software, no real money, fast-moving, docs in draft. Great to experiment on, not to depend on. |
 | **Docs** | Actively being built. Several guides carry explicit "early draft" banners; the headless-node guide is closer to a placeholder. Following one and reporting where it broke is a requested contribution. |

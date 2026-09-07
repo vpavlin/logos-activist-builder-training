@@ -249,11 +249,7 @@ from Basecamp as the **ChatSDK module**. The mix protocol is part of
 
 Logos Storage is a filesharing protocol which allows anyone running the Logos stack to
 publish a file and anyone else to fetch it, without a server in between and without either
-of them being identifiable. It began as Codex, a decentralised storage network in the
-conventional sense, where you paid providers to hold your data and they periodically proved
-that they still had it. That model was removed from the codebase in January 2026 and the
-project refocused on privacy preserving filesharing, which is a narrower goal and a
-considerably harder one.
+of them being identifiable.
 
 Files are content addressed, so a file's name is derived from its bytes, and asking for it
 by name means asking for exactly those bytes and nothing else. Availability comes from
