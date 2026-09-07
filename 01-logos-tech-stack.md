@@ -55,18 +55,14 @@ account has no way of saying *you have had enough*. Email survived by centralisi
 defence against spam was reputation, reputation required scale, and so today you can
 absolutely run your own mail server — it just won't get delivered.
 
-**We could publish without a host.** Napster, in 1999, showed that millions of ordinary
-people would share files directly with one another. It had one weakness: a central index,
-which turned out to be a single address at which to serve a court order. Gnutella answered
-that within a year by removing the index altogether, and promptly discovered that a network
-where every search is shouted at everybody does not scale. BitTorrent found the balance and
-is still with us, which makes it the interesting one - because what it never had was any
-privacy at all. A swarm is public by construction: to download from people you must first
-announce yourself to them, so every participant can see the address of every other. This is
-not a bug that went unfixed, it is how the design works, and it is why the standard
-enforcement technique against filesharing for the past twenty years has simply been to join
-the swarm and write down who is in it. Millions of people have received a letter about
-something they downloaded, and that is the mechanism.
+**We could publish without a host.** Napster showed in 1999 that millions of people would
+share files directly with each other; its weakness was a central index, which is one address
+at which to serve a court order. Gnutella removed the index and found that shouting every
+search at everybody does not scale. BitTorrent got the balance right and is still with us.
+What it never had was privacy - a swarm is public by construction, since to download from
+people you must announce yourself to them. That is why filesharing enforcement has always
+been to join the swarm and note who is in it, and why so many people have had a letter about
+something they downloaded.
 
 **Agreeing is the one the internet never tried to decentralise.** Its actual answers to "who
 is this" and "where does this name point" - the certificate authorities that vouch for
