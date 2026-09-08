@@ -2,73 +2,59 @@
 
 **Session 2 — Eco Dev — 30 minutes**
 
-Short on purpose. Roughly 10 minutes of talking, the rest is discussion — this
+Short on purpose. About 5 minutes of talking, the rest is discussion — this
 session is about what the room does next, so the room should do most of it.
 
 ---
 
-## Parallel infrastructure
+## Who is an activist builder?
 
-Circles work on winnable issues: local, concrete, solvable in weeks or months.
-That work has its own home in this training. This session is about the other
-thing.
+Someone who understands the technology and at the same time participates in Logos
+Circles.
 
-**Parallel infrastructure is cross-circle, repeatable, long-term and often
-technical.** It is what one circle builds and thirty circles use.
+Standing in both places is the whole point. It is what lets a person analyse,
+define and implement infrastructure and projects that work across circles rather
+than only inside one. We call that **parallel infrastructure**.
 
-A housing campaign needs a safe way to collect testimony. Solving that for one
-campaign is a winnable issue. Building the tool any campaign can pick up is
-parallel infrastructure.
+Parallel infrastructure should let circles replicate campaigns without rebuilding
+them from scratch — crowdfunding, people organising, feedback and testimonial
+collection, or whatever else comes out of a particular winnable issue.
 
-It only happens if somebody builds it deliberately. Every campaign is under
-pressure to solve today's problem and move on, so shared infrastructure is
-nobody's job by default. That gap is the reason this role exists.
+It needs someone to do it deliberately. Every campaign is under pressure to solve
+today's problem and move on, so work that serves the next circle is nobody's job
+by default. That is the gap this role fills.
 
-> **On the name.** This is not a new idea. Václav Benda wrote about the *parallel
-> polis* in 1978: people living under an unaccountable state should build their
-> own structures for education, culture and information, rather than only
-> confronting the official ones. Charter 77 circles did exactly that. Prague has
-> a Paralelní Polis named after the essay. The same move, now applied to the
-> infrastructure a movement runs on.
+The technical part is specific: understand the Logos tech stack well enough to map
+local-first, peer-to-peer application and infrastructure architecture onto a real
+problem. That is what session 1 was for.
 
----
-
-## The activist builder
-
-That is the role this training is about, and it is probably you.
-
-**An activist builder is a technically skilled contributor who turns community
-needs into systems, tools, media, research and parallel infrastructure.**
-
-Some work independently. Some are attached to a local circle. They help circles
-solve immediate winnable issues, and they notice when a solution could serve more
-than one community.
-
-The distinction worth holding on to: a Logos developer starts with the stack and
-asks what can be built on it. An activist builder starts with a real community
-need and uses technology to meet it. Same tools, opposite direction.
-
-There is no application and nobody appoints you.
+> **On the name.** Václav Benda wrote about the *parallel polis* in 1978 — the
+> argument that people under an unaccountable state should build their own
+> structures for education, culture and information rather than only confronting
+> the official ones. Charter 77 was that idea embodied, and Prague has a Paralelní
+> Polis named after the essay. This is the same move, applied to the
+> infrastructure a movement now runs on.
 
 ---
 
-## How we work
+## Working together
 
-Three things. They are the whole of it.
+We all rely on and build open source software, and we would rather build it with
+you than for you. Openly, in public, giving and receiving feedback — on the Logos
+stack itself and on the projects you care about.
 
-**We build open source.** Public repos, open licences, work visible while it is
-still unfinished. If you build something for your circle and it works, put it
-where the next circle can find it. That is the difference between a useful
-afternoon and parallel infrastructure.
+In practice that means three things.
 
-**We experiment, ship fast, and talk about things early.** Half-finished is fine.
-Wrong is fine. "I tried this and it broke at step four" is a contribution, not an
-admission — and it is the most useful thing a new person has to offer, because
-you can only see what is confusing while you are still new. That stops being true
-in about a month.
+**Everything in the open.** Public repos, open licences, work visible while it is
+still unfinished.
 
-**We communicate in the open.** Discord for questions. GitHub issues for anything
-that should outlive a conversation. Office Hours to ask people directly. Dev Club
+**Experiment, ship fast, talk early.** Half-finished is fine. Wrong is fine. "I
+tried this and it broke at step four" is a contribution, not an admission, and it
+is the most useful thing a new person has to offer — you can only see what is
+confusing while you are still new.
+
+**Come and find us.** Discord for questions. GitHub issues for anything that
+should outlive a conversation. Office Hours to ask people directly. Dev Club
 streams to watch this being built, including the parts that do not work.
 
 ---
@@ -92,9 +78,9 @@ more than a solution proposed from a desk.
 
 ## Discussion
 
-- What is one winnable issue in your circle right now?
-- Is any part of it something thirty other circles also need?
-- What is stopping you from building that part?
+- What is your circle working on right now?
+- Which part of it would another circle have to build all over again?
+- What would it take to make that part reusable?
 
 ---
 
