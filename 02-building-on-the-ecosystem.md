@@ -43,7 +43,7 @@ We all rely on and build open source software, and we would rather build it with
 you than for you. Openly, in public, giving and receiving feedback — on the Logos
 stack itself and on the projects you care about.
 
-In practice that means three things.
+Two things follow from that.
 
 **Everything in the open.** Public repos, open licences, work visible while it is
 still unfinished.
@@ -53,9 +53,26 @@ tried this and it broke at step four" is a contribution, not an admission, and i
 is the most useful thing a new person has to offer — you can only see what is
 confusing while you are still new.
 
-**Come and find us.** Discord for questions. GitHub issues for anything that
-should outlive a conversation. Office Hours to ask people directly. Dev Club
-streams to watch this being built, including the parts that do not work.
+---
+
+## Who you will work with
+
+Mainly the Ecosystem Development team. Eco Dev sits between the technology and
+the people using it, and works in both directions.
+
+Bring them an immediate problem and they will help you get past it. Bring them something that needs a deeper change — a missing
+feature, a limit in the protocol, a bug that turns out to go further down than it
+looked — and they will route it through the organisation to the team that owns
+that piece. Working out who maintains what is not your job.
+
+Where this happens:
+
+- **Discord** — questions, day to day.
+- **GitHub issues** — anything that should outlive a conversation.
+- **Office Hours** — scheduled time to ask people directly.
+- **Dev Clubs** — regular meetings and live streams where the stack gets built in
+  public, including the parts that do not work. The easiest way to see how it is
+  really used, and the easiest way to be seen.
 
 ---
 
