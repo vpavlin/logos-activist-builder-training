@@ -7,29 +7,22 @@ session is about what the room does next, so the room should do most of it.
 
 ---
 
-## Two kinds of work
+## Parallel infrastructure
 
-There is a tension in this training, and it is better named than hidden. Circles
-work on things that are local and urgent. Eco Dev works on infrastructure that
-takes years. Both are needed. They are not the same job.
+Circles work on winnable issues: local, concrete, solvable in weeks or months.
+That work has its own home in this training. This session is about the other
+thing.
 
-So, two terms.
+**Parallel infrastructure is cross-circle, repeatable, long-term and often
+technical.** It is what one circle builds and thirty circles use.
 
-| Winnable issues | Parallel infrastructure |
-|---|---|
-| Local | Cross-circle |
-| Concrete | Repeatable |
-| Visible | Long-term |
-| Solved in weeks or months | Often technical |
-| Owned by circles | Owned by activist builders, supported by Eco Dev |
+A housing campaign needs a safe way to collect testimony. Solving that for one
+campaign is a winnable issue. Building the tool any campaign can pick up is
+parallel infrastructure.
 
-A winnable issue is a housing campaign that needs a safe way to collect
-testimony. Parallel infrastructure is the tool for collecting testimony that
-thirty campaigns can use.
-
-The second only happens if somebody builds it deliberately. Every campaign is
-under pressure to solve today's problem and move on, so shared infrastructure is
-nobody's job by default.
+It only happens if somebody builds it deliberately. Every campaign is under
+pressure to solve today's problem and move on, so shared infrastructure is
+nobody's job by default. That gap is the reason this role exists.
 
 > **On the name.** This is not a new idea. Václav Benda wrote about the *parallel
 > polis* in 1978: people living under an unaccountable state should build their
