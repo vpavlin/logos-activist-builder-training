@@ -59,20 +59,23 @@ streams to watch this being built, including the parts that do not work.
 
 ---
 
-## Getting it funded
+## Defining the work
 
-Two routes exist when parallel infrastructure needs more than volunteer time.
+Some parallel infrastructure is too large for volunteer time. Two routes exist
+for funding it: **Lambda Prizes**, for hard problems where the solution is not
+dictated and whoever takes it on defines the approach, and **RFPs**, for work
+where the requirements are already known.
 
-**Lambda Prizes** are for hard problems where the solution is not dictated. A
-category of problem is named and a price is put on solving it. You define the
-approach.
+The first thing we want from you is not an application. It is help writing them.
 
-**RFPs** are for work where the requirements are already known and the job needs
-doing.
+Parallel infrastructure tends to be genuinely complex, and the requirements are
+the hard part. Somebody who sits in a circle and understands the stack is far
+better placed to say what a crowdfunding tool or a testimonial system actually
+has to do than anyone scoping it from a desk. Help us work out the problem first.
+Building the solution afterwards is welcome, and entirely your choice.
 
-The distinction between winnable issues and parallel infrastructure is what makes
-these easier to scope — and it is why a need described from the field is worth
-more than a solution proposed from a desk.
+A need described from the field is worth more to us than a solution proposed from
+a desk.
 
 ---
 
