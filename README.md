@@ -6,7 +6,7 @@ Materials for two 30-minute Eco Dev sessions.
 |---|---------|------|--------|
 | 1 | Logos tech stack intro | [`01-logos-tech-stack.md`](01-logos-tech-stack.md) | 30' |
 | 1 | ↳ slides outline (17 slides) | [`01-slides-outline.md`](01-slides-outline.md) | — |
-| 2 | How contributors can build on the ecosystem | [`02-building-on-the-ecosystem.md`](02-building-on-the-ecosystem.md) | 30' |
+| 2 | How contributors can build on the ecosystem | [`02-building-on-the-ecosystem.md`](02-building-on-the-ecosystem.md) | 30' (10' talk + discussion) |
 | — | Pointers, links, glossary (handout / appendix) | [`resources.md`](resources.md) | — |
 
 ## Who this is for
