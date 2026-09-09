@@ -1,32 +1,21 @@
-# λ | Building on the Ecosystem — slides outline
+<!-- Session 2 deck. Full script and detail: 02-building-on-the-ecosystem.md -->
 
-Session 2, 30 minutes, 10 slides. Only ~6 minutes of these are talking; slide 10
-stays up for the rest.
+## λ | Building on the Ecosystem
 
-Bullets are what goes *on* the slide. Italics are the point to land, not text to
-display.
+Activist Builder Training
 
-Full script: [`02-building-on-the-ecosystem.md`](02-building-on-the-ecosystem.md)
+===
 
----
-
-**1 · Title** — 0'
-
-- λ | Building on the Ecosystem
-- Activist Builder Training
-
----
-
-**2 · Who is an activist builder?** — 0'30"
+## Who is an activist builder?
 
 - Understands the technology
 - Participates in Logos Circles
 
 *Standing in both places is the whole point.*
 
----
+===
 
-**3 · Parallel infrastructure** — 1'30"
+## Parallel infrastructure
 
 - Cross-circle · repeatable · long-term
 - Campaigns replicated, not rebuilt
@@ -34,9 +23,9 @@ Full script: [`02-building-on-the-ecosystem.md`](02-building-on-the-ecosystem.md
 
 *What one circle builds and thirty circles use.*
 
----
+===
 
-**4 · Not a new idea** — 2'30"
+## Not a new idea
 
 - Václav Benda, *parallel polis*, 1978
 - Charter 77
@@ -44,9 +33,9 @@ Full script: [`02-building-on-the-ecosystem.md`](02-building-on-the-ecosystem.md
 
 *Same move. New infrastructure.*
 
----
+===
 
-**5 · Why it needs someone** — 3'
+## Why it needs someone
 
 - Every campaign solves today and moves on
 - Shared work is nobody's job by default
@@ -54,9 +43,9 @@ Full script: [`02-building-on-the-ecosystem.md`](02-building-on-the-ecosystem.md
 
 *That is what session 1 was for.*
 
----
+===
 
-**6 · How we work** — 4'
+## How we work
 
 - Everything in the open
 - Experiment, ship fast, talk early
@@ -64,18 +53,18 @@ Full script: [`02-building-on-the-ecosystem.md`](02-building-on-the-ecosystem.md
 
 *You can only see what is confusing while you are new.*
 
----
+===
 
-**7 · Who you work with** — 4'30"
+## Who you work with
 
 - Eco Dev
 - Immediate problems: they help
 - Deeper problems: they route
 - Finding out who maintains what is not your job
 
----
+===
 
-**8 · Where we talk** — 5'
+## Where we talk
 
 - Discord
 - GitHub issues
@@ -84,9 +73,9 @@ Full script: [`02-building-on-the-ecosystem.md`](02-building-on-the-ecosystem.md
 
 *Dev Clubs first if you are not sure yet. Watch before committing.*
 
----
+===
 
-**9 · Defining the work** — 5'30"
+## Defining the work
 
 - Lambda Prizes — you define the approach
 - RFPs — requirements already known
@@ -94,12 +83,10 @@ Full script: [`02-building-on-the-ecosystem.md`](02-building-on-the-ecosystem.md
 
 *A need from the field beats a solution from a desk.*
 
----
+===
 
-**10 · Over to you** — 6' → 30'
+## Over to you
 
 - What is your circle working on right now?
 - Which part would another circle build all over again?
 - What would it take to make that part reusable?
-
-*Leave this up. This is the session.*

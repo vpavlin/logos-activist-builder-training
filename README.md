@@ -5,9 +5,9 @@ Materials for two 30-minute Eco Dev sessions.
 | # | Session | File | Length |
 |---|---------|------|--------|
 | 1 | Logos tech stack intro | [`01-logos-tech-stack.md`](01-logos-tech-stack.md) | 30' |
-| 1 | ↳ slides outline (12 slides) | [`01-slides-outline.md`](01-slides-outline.md) | — |
+| 1 | ↳ deck, 12 slides (Fileverse ddocs) | [`01-slides-outline.md`](01-slides-outline.md) | — |
 | 2 | How contributors can build on the ecosystem | [`02-building-on-the-ecosystem.md`](02-building-on-the-ecosystem.md) | 30' (6' talk + discussion) |
-| 2 | ↳ slides outline (10 slides) | [`02-slides-outline.md`](02-slides-outline.md) | — |
+| 2 | ↳ deck, 10 slides (Fileverse ddocs) | [`02-slides-outline.md`](02-slides-outline.md) | — |
 | — | Pointers, links, glossary (handout / appendix) | [`resources.md`](resources.md) | — |
 
 ## Who this is for
@@ -19,6 +19,14 @@ make anyone a Logos developer in 60 minutes. The goal is:
 2. They leave knowing **where to go next** — to build themselves, or to find people who will.
 3. They leave with an accurate sense of **what's ready and what isn't**, so nobody bounces
    off a broken quickstart and concludes the whole thing is vapour.
+
+## Deck format
+
+Both decks are written for Fileverse ddocs: `##` for the slide title, `===` on
+its own line as the slide break. No timing markers — pacing lives in the scripts.
+
+The italic line at the foot of most slides is the point to land. It renders as
+slide text, so delete it if you'd rather say it than show it.
 
 ## How the material is written
 

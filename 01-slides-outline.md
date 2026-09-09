@@ -1,37 +1,22 @@
-# λ | Logos Tech Stack — slides outline
+<!-- Session 1 deck. Full script and detail: 01-logos-tech-stack.md -->
 
-Session 1, 30 minutes, 12 slides. Bullets are what goes *on* the slide.
-Italics are the point to land, not text to display.
+## λ | Logos Tech Stack
 
-Trimmed after the first recording: the history section is gone (why-Logos is
-covered in other modules), storage is one slide, Basecamp is much shorter, and
-the module permission model is cut as too deep for an intro.
+Activist Builder Training
 
-The fuller versions of all of it stay in
-[`01-logos-tech-stack.md`](01-logos-tech-stack.md), which is the e-learning
-source and the place to look when a question goes deeper than a slide.
+===
 
----
-
-**1 · Title** — 0'
-
-- λ | Logos Tech Stack
-- Activist Builder Training
-
----
-
-**2 · Three ancient needs** — 1'
+## Three ancient needs
 
 - Communicate — Usenet, email
 - Archive — Napster, BitTorrent
 - Agree — banks and platforms, then Bitcoin
 
-*Decentralised answers existed and people used them. Privacy was the casualty
-every time.*
+*Decentralised answers existed and people used them. Privacy was the casualty every time.*
 
----
+===
 
-**3 · Standing on giants** — 3'
+## Standing on giants
 
 - Ouroboros · Solana model · RISC Zero · libp2p
 - Foundations borrowed on purpose
@@ -39,9 +24,9 @@ every time.*
 
 *Not reinventing. The new work goes where it is needed.*
 
----
+===
 
-**4 · Messaging** — 6'
+## Messaging
 
 - Peer-to-peer, built on libp2p
 - Payload is opaque bytes
@@ -50,18 +35,18 @@ every time.*
 
 *The network can't build a social graph out of you.*
 
----
+===
 
-**5 · Messaging — being added** — 9'
+## Messaging — being added
 
 - libchat — encrypted conversations, groups
 - libp2p-mix — hides who sent it
 
 *Content encryption alone still leaves a pattern.*
 
----
+===
 
-**6 · Storage** — 12'
+## Storage
 
 - Publish and fetch, no server
 - Content addressed
@@ -69,9 +54,9 @@ every time.*
 
 *The dangerous act is often reading, not publishing.*
 
----
+===
 
-**7 · Blockchain** — 15'
+## Blockchain
 
 - Bedrock (base) + Zones (apps run here)
 - Cryptarchia — private leadership election
@@ -79,17 +64,17 @@ every time.*
 
 *Helping secure the network shouldn't announce that you are.*
 
----
+===
 
-**8 · Blockchain — LEZ** — 18'
+## Blockchain — LEZ
 
 - Public and private accounts, one address space
 - Program written once, works across both
 - Protocol enforces privacy, not the developer
 
----
+===
 
-**9 · Basecamp** — 21'
+## Basecamp
 
 - The thing you actually open
 - An app that hosts modules — not a browser
@@ -97,27 +82,27 @@ every time.*
 
 *Plumbing nobody can install is a research project.*
 
----
+===
 
-**10 · Running a node** — 24'
+## Running a node
 
 - Take part in consensus
 - Carry others' traffic
 - Your own always-on peer
 - One tool: `logosctl`
 
----
+===
 
-**11 · Raspberry Pi 5, 64 GB** — 26'
+## Raspberry Pi 5, 64 GB
 
 - Not a datacenter
 - A box on a shelf
 
 *A network that needs a datacenter recentralises the moment it matters.*
 
----
+===
 
-**12 · Where to go next** — 28'
+## Where to go next
 
 - docs.logos.co
 - roadmap.logos.co
