@@ -29,20 +29,12 @@ Activist Builder Training
 ## λ Messaging
 
 - Peer-to-peer, built on libp2p
-- Payload is opaque bytes
+- Opaque payloads — chat, APIs, bots
 - Serves phones, not just servers
 - Rate limiting without identity
+- Being added: libchat (encrypted groups), libp2p-mix (hides the sender)
 
-*The network can't build a social graph out of you.*
-
-===
-
-## λ Messaging — being added
-
-- libchat — encrypted conversations, groups
-- libp2p-mix — hides who sent it
-
-*Content encryption alone still leaves a pattern.*
+*The network can't build a social graph out of you — and encryption alone would still leave one.*
 
 ===
 
