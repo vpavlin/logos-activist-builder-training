@@ -56,6 +56,7 @@ Activist Builder Training
   - Blend — hides who proposed
 - Zones — lightweight chains on top, where apps run
 - LEZ — the first zone: public and private accounts in one space
+  - Programs written once run across both states
 
 *Helping secure the network shouldn't announce that you are.*
 
