@@ -52,8 +52,8 @@ Activist Builder Training
 ## λ Blockchain
 
 - Bedrock — the base: consensus and data availability
-- Cryptarchia — private leadership election
-- Blend — hides who proposed
+  - Cryptarchia — private leadership election
+  - Blend — hides who proposed
 - Zones — lightweight chains on top, where apps run
 - LEZ — the first zone: public and private accounts in one space
 
