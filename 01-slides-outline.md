@@ -51,15 +51,11 @@ Activist Builder Training
 
 ## λ Blockchain
 
-```
-Bedrock        consensus + data availability
-  └─ Zones     lightweight chains, each with its own rules
-       └─ LEZ  the first zone — one way to build one
-```
-
-- **Bedrock** — Cryptarchia (private leadership election), Blend (hides who proposed)
-- **LEZ** — public and private accounts in one address space, privacy enforced by
-  the protocol rather than by the developer
+- Bedrock — the base: consensus and data availability
+- Cryptarchia — private leadership election
+- Blend — hides who proposed
+- Zones — lightweight chains on top, where apps run
+- LEZ — the first zone: public and private accounts in one space
 
 *Helping secure the network shouldn't announce that you are.*
 
