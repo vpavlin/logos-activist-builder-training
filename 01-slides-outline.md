@@ -32,7 +32,8 @@ Activist Builder Training
 - Opaque payloads — chat, APIs, bots
 - Serves phones, not just servers
 - Rate limiting without identity
-- Being added: libchat (encrypted groups), libp2p-mix (hides the sender)
+- libchat — encrypted conversations and groups
+- libp2p-mix — hides who sent it
 
 *The network can't build a social graph out of you — and encryption alone would still leave one.*
 
