@@ -517,10 +517,15 @@ shared record. This is the one with real requirements: zero-knowledge circuit fi
 bootstrap peers, and patience while it syncs.
 
 The number worth saying out loud is the hardware target: a **Raspberry Pi 5 with around
-64 GB of storage**. Not a datacenter, not a rented server with somebody's name on the
-contract — a device on a shelf in a flat, on a normal connection. That is a deliberate design
-goal and it is arguably the most politically significant fact in this session. A network that
-needs a datacenter to participate in is a network that recentralises the moment it matters.
+64 GB of storage**, or any reasonably modern machine. Not a datacenter, not a rented server
+with somebody's name on the contract — a device on a shelf in a flat, on a normal connection.
+Second-hand is fine and for a group with no budget it is the obvious route, since ex-office
+desktops and old laptops are plentiful and cheap. The one real constraint is that the
+operating system has to be current, not the hardware.
+
+That is a deliberate design goal and it is arguably the most politically significant fact in
+this session. A network that needs a datacenter to participate in is a network that
+recentralises the moment it matters.
 
 **2. To carry other people's traffic.** The delivery and storage modules don't produce
 blocks; they make the network usable for everyone else. This is the neighbourly contribution
