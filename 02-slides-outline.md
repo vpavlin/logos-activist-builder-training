@@ -9,19 +9,27 @@ Activist Builder Training
 ## λ Who is an activist builder?
 
 - Understands the technology
-- Participates in Logos Circles
+- Takes part in Logos Circles
 
-*Standing in both places is the whole point.*
+*Standing in both places is the point.*
 
 ===
 
-## λ Parallel infrastructure
+## λ Support the Circles
 
-- Cross-circle · repeatable · long-term
-- Campaigns replicated, not rebuilt
-- Crowdfunding · organising · testimonial collection
+- Technology, research, design — whatever moves an issue forward
+- Join locally, dial in, or work async
+- Start from the Circle's need, not from the technology
 
-*What one circle builds and thirty circles use.*
+===
+
+## λ Spot what repeats
+
+- The same problems keep appearing across Circles
+- Crowdfunding · organising · collecting testimony
+- One Circle needed it, thirty could use it
+
+*Making that reusable is parallel infrastructure. Nobody owns that job by default.*
 
 ===
 
@@ -31,62 +39,47 @@ Activist Builder Training
 - Charter 77
 - Paralelní Polis, Prague
 
-*Same move. New infrastructure.*
+===
+
+## λ Build with other builders
+
+- Organise a Builders Meetup in your city
+- Not another tech meetup
+- Bring problems from Circles, hack together
+
+*Builders who exchange tools compound. Builders who work alone repeat each other.*
 
 ===
 
-## λ Why it needs someone
+## λ Who you work with
 
-- Every campaign solves today and moves on
-- Shared work is nobody's job by default
-- Map local-first p2p onto a real problem
+- Eco Dev first — immediate problems they help, deeper ones they route
+- Finding out who maintains what is not your job
+- Discord · GitHub issues · Dev Clubs
 
-*That is what session 1 was for.*
+*Dev Clubs if you are not sure yet. Watch before you commit.*
 
 ===
 
 ## λ How we work
 
 - Everything in the open
-- Experiment, ship fast, talk early
+- Ship fast, talk early
 - "It broke at step four" is a contribution
-
-*You can only see what is confusing while you are new.*
-
-===
-
-## λ Who you work with
-
-- Eco Dev
-- Immediate problems: they help
-- Deeper problems: they route
-- Finding out who maintains what is not your job
-
-===
-
-## λ Where we talk
-
-- Discord
-- GitHub issues
-- Builders meetup
-- Dev Clubs — meetings and live streams
-
-*Dev Clubs first if you are not sure yet. Watch before committing.*
 
 ===
 
 ## λ Defining the work
 
-- Lambda Prizes — you define the approach
-- RFPs — requirements already known
+- Lambda Prizes and RFPs fund the bigger pieces
 - **First ask: help us write them**
 
-*A need from the field beats a solution from a desk.*
+*You are closer to the problem than anyone scoping it from a desk.*
 
 ===
 
 ## λ Over to you
 
-- What is your circle working on right now?
-- Which part would another circle build all over again?
+- What is your Circle working on right now?
+- Which part would another Circle build all over again?
 - What would it take to make that part reusable?
