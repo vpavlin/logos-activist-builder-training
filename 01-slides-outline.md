@@ -22,11 +22,16 @@ source and the place to look when a question goes deeper than a slide.
 
 **2 · Three ancient needs** — 1'
 
-- Communicate
-- Archive
-- Agree
+- Communicate — Usenet, email
+- Archive — Napster, BitTorrent
+- Agree — banks and platforms, then Bitcoin
 
-*Everything in the stack comes from these three.*
+*One line each, if you want them: Usenet drowned in spam. A BitTorrent swarm
+shows everyone who is in it. Bitcoin solved agreeing, and made the ledger
+permanently public.*
+
+*Decentralised answers existed and people used them. Privacy was the casualty
+every time — which is the thesis of the next slide.*
 
 ---
 
