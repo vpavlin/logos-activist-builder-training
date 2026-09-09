@@ -6,7 +6,7 @@ Activist Builder Training
 
 ===
 
-## Who is an activist builder?
+## λ Who is an activist builder?
 
 - Understands the technology
 - Participates in Logos Circles
@@ -15,7 +15,7 @@ Activist Builder Training
 
 ===
 
-## Parallel infrastructure
+## λ Parallel infrastructure
 
 - Cross-circle · repeatable · long-term
 - Campaigns replicated, not rebuilt
@@ -25,7 +25,7 @@ Activist Builder Training
 
 ===
 
-## Not a new idea
+## λ Not a new idea
 
 - Václav Benda, *parallel polis*, 1978
 - Charter 77
@@ -35,7 +35,7 @@ Activist Builder Training
 
 ===
 
-## Why it needs someone
+## λ Why it needs someone
 
 - Every campaign solves today and moves on
 - Shared work is nobody's job by default
@@ -45,7 +45,7 @@ Activist Builder Training
 
 ===
 
-## How we work
+## λ How we work
 
 - Everything in the open
 - Experiment, ship fast, talk early
@@ -55,7 +55,7 @@ Activist Builder Training
 
 ===
 
-## Who you work with
+## λ Who you work with
 
 - Eco Dev
 - Immediate problems: they help
@@ -64,7 +64,7 @@ Activist Builder Training
 
 ===
 
-## Where we talk
+## λ Where we talk
 
 - Discord
 - GitHub issues
@@ -75,7 +75,7 @@ Activist Builder Training
 
 ===
 
-## Defining the work
+## λ Defining the work
 
 - Lambda Prizes — you define the approach
 - RFPs — requirements already known
@@ -85,7 +85,7 @@ Activist Builder Training
 
 ===
 
-## Over to you
+## λ Over to you
 
 - What is your circle working on right now?
 - Which part would another circle build all over again?

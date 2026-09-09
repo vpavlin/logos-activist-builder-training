@@ -6,7 +6,7 @@ Activist Builder Training
 
 ===
 
-## Three ancient needs
+## λ Three ancient needs
 
 - Communicate — Usenet, email
 - Archive — Napster, BitTorrent
@@ -16,7 +16,7 @@ Activist Builder Training
 
 ===
 
-## Standing on giants
+## λ Standing on giants
 
 - Ouroboros · Solana model · RISC Zero · libp2p
 - Foundations borrowed on purpose
@@ -26,7 +26,7 @@ Activist Builder Training
 
 ===
 
-## Messaging
+## λ Messaging
 
 - Peer-to-peer, built on libp2p
 - Payload is opaque bytes
@@ -37,7 +37,7 @@ Activist Builder Training
 
 ===
 
-## Messaging — being added
+## λ Messaging — being added
 
 - libchat — encrypted conversations, groups
 - libp2p-mix — hides who sent it
@@ -46,7 +46,7 @@ Activist Builder Training
 
 ===
 
-## Storage
+## λ Storage
 
 - Publish and fetch, no server
 - Content addressed
@@ -56,7 +56,7 @@ Activist Builder Training
 
 ===
 
-## Blockchain
+## λ Blockchain
 
 - Bedrock (base) + Zones (apps run here)
 - Cryptarchia — private leadership election
@@ -66,7 +66,7 @@ Activist Builder Training
 
 ===
 
-## Blockchain — LEZ
+## λ Blockchain — LEZ
 
 - Public and private accounts, one address space
 - Program written once, works across both
@@ -74,7 +74,7 @@ Activist Builder Training
 
 ===
 
-## Basecamp
+## λ Basecamp
 
 - The thing you actually open
 - An app that hosts modules — not a browser
@@ -84,7 +84,7 @@ Activist Builder Training
 
 ===
 
-## Running a node
+## λ Running a node
 
 - Take part in consensus
 - Carry others' traffic
@@ -93,7 +93,7 @@ Activist Builder Training
 
 ===
 
-## Raspberry Pi 5, 64 GB
+## λ Raspberry Pi 5, 64 GB
 
 - Not a datacenter
 - A box on a shelf
@@ -102,7 +102,7 @@ Activist Builder Training
 
 ===
 
-## Where to go next
+## λ Where to go next
 
 - docs.logos.co
 - roadmap.logos.co
