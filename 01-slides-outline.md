@@ -51,19 +51,15 @@ Activist Builder Training
 
 ## λ Blockchain
 
-- Bedrock (base) + Zones (apps run here)
-- Cryptarchia — private leadership election
-- Blend — hides who proposed
+- **Bedrock** — the base layer
+  - Cryptarchia — private leadership election
+  - Blend — hides who proposed
+- **Zones** — where apps run, first of them LEZ
+  - Public and private accounts, one address space
+  - Program written once, works across both
+  - Privacy enforced by the protocol, not the developer
 
 *Helping secure the network shouldn't announce that you are.*
-
-===
-
-## λ Blockchain — LEZ
-
-- Public and private accounts, one address space
-- Program written once, works across both
-- Protocol enforces privacy, not the developer
 
 ===
 
