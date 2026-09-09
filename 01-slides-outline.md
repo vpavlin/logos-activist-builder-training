@@ -80,10 +80,12 @@ Activist Builder Training
 
 ===
 
-## λ Raspberry Pi 5, 64 GB
+## λ Hardware
 
-- Not a datacenter
-- A box on a shelf
+- Target: Raspberry Pi 5, 64 GB storage
+- Or second-hand — old laptops, ex-office desktops, auction lots
+- Old hardware is fine; the OS needs to be current
+- Not a datacenter. A box on a shelf.
 
 *A network that needs a datacenter recentralises the moment it matters.*
 
