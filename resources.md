@@ -262,7 +262,7 @@ Useful to hand over, because it stops people bouncing off the wrong entry point.
 
 - **Discord `#ecodev`** — main channel for ecosystem questions. Per-team channels exist for
   deeper protocol questions.
-- **Office hours** — recurring scheduled slot for direct questions.
+- **Builders meetup** — recurring scheduled slot for direct questions.
 - **GitHub issues** — bugs on the specific repo; needs and ideas on
   [`logos-co/ecosystem`](https://github.com/logos-co/ecosystem/issues).
 

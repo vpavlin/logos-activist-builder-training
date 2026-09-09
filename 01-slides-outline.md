@@ -1,9 +1,15 @@
 # λ | Logos Tech Stack — slides outline
 
-Session 1, 30 minutes, ~17 slides. Bullets are what goes *on* the slide.
+Session 1, 30 minutes, 12 slides. Bullets are what goes *on* the slide.
 Italics are the point to land, not text to display.
 
-Full script: [`01-logos-tech-stack.md`](01-logos-tech-stack.md)
+Trimmed after the first recording: the history section is gone (why-Logos is
+covered in other modules), storage is one slide, Basecamp is much shorter, and
+the module permission model is cut as too deep for an intro.
+
+The fuller versions of all of it stay in
+[`01-logos-tech-stack.md`](01-logos-tech-stack.md), which is the e-learning
+source and the place to look when a question goes deeper than a slide.
 
 ---
 
@@ -20,41 +26,21 @@ Full script: [`01-logos-tech-stack.md`](01-logos-tech-stack.md)
 - Archive
 - Agree
 
-*Everything in the stack comes from these.*
+*Everything in the stack comes from these three.*
 
 ---
 
-**3 · We already had answers** — 2'
-
-- Usenet, email — 1980s
-- Napster → Gnutella → BitTorrent — 1999
-- Bank, platform, trusted treasurer
-
-*Decentralised versions existed. Millions used them.*
-
----
-
-**4 · What we lost** — 4'
-
-- Usenet: spam → needed identity
-- BitTorrent: swarm is public → the letter
-- Ledgers: solved 2008 → permanently readable
-
-*Same casualty every time: privacy.*
-
----
-
-**5 · Standing on giants** — 6'
+**3 · Standing on giants** — 3'
 
 - Ouroboros · Solana model · RISC Zero · libp2p
 - Foundations borrowed on purpose
 - New work: privacy, unlinkability, anonymity, self-sovereignty, scale
 
-*Not reinventing. Concentrating the new work in one place.*
+*Not reinventing. The new work goes where it is needed.*
 
 ---
 
-**6 · Messaging** — 8'
+**4 · Messaging** — 6'
 
 - Peer-to-peer, built on libp2p
 - Payload is opaque bytes
@@ -65,7 +51,7 @@ Full script: [`01-logos-tech-stack.md`](01-logos-tech-stack.md)
 
 ---
 
-**7 · Messaging — being added** — 10'
+**5 · Messaging — being added** — 9'
 
 - libchat — encrypted conversations, groups
 - libp2p-mix — hides who sent it
@@ -74,27 +60,17 @@ Full script: [`01-logos-tech-stack.md`](01-logos-tech-stack.md)
 
 ---
 
-**8 · Storage** — 12'
+**6 · Storage** — 12'
 
 - Publish and fetch, no server
 - Content addressed
-- Availability follows interest
-
-*Durability comes later. Not a vault yet.*
-
----
-
-**9 · Storage — the real property** — 14'
-
-- Publisher unlinkability
-- Downloader unlinkability
-- Caching nodes can deny knowing
+- Publisher and downloader unlinkability
 
 *The dangerous act is often reading, not publishing.*
 
 ---
 
-**10 · Blockchain** — 16'
+**7 · Blockchain** — 15'
 
 - Bedrock (base) + Zones (apps run here)
 - Cryptarchia — private leadership election
@@ -104,7 +80,7 @@ Full script: [`01-logos-tech-stack.md`](01-logos-tech-stack.md)
 
 ---
 
-**11 · Blockchain — LEZ** — 18'
+**8 · Blockchain — LEZ** — 18'
 
 - Public and private accounts, one address space
 - Program written once, works across both
@@ -112,35 +88,17 @@ Full script: [`01-logos-tech-stack.md`](01-logos-tech-stack.md)
 
 ---
 
-**12 · Basecamp** — 20'
+**9 · Basecamp** — 21'
 
 - The thing you actually open
-- Hosts modules, installs more
-- Like a browser in shape
+- An app that hosts modules — not a browser
+- Modules are installed and signed, from sources you choose
 
 *Plumbing nobody can install is a research project.*
 
 ---
 
-**13 · Basecamp — not the browser's trust model** — 21'
-
-- Web app: served by someone who sees you fetch it
-- Can serve you different code than the auditor saw
-- Basecamp: installed, signed, verified locally, repos you choose
-
----
-
-**14 · Basecamp — what stops an app misbehaving** — 23'
-
-- Modules ask; people approve
-- Apps talk only along declared lines
-- Packages signed
-
-*No store. Nobody decides what you may install.*
-
----
-
-**15 · Running a node** — 25'
+**10 · Running a node** — 24'
 
 - Take part in consensus
 - Carry others' traffic
@@ -149,7 +107,7 @@ Full script: [`01-logos-tech-stack.md`](01-logos-tech-stack.md)
 
 ---
 
-**16 · Raspberry Pi 5, 64 GB** — 27'
+**11 · Raspberry Pi 5, 64 GB** — 26'
 
 - Not a datacenter
 - A box on a shelf
@@ -158,11 +116,11 @@ Full script: [`01-logos-tech-stack.md`](01-logos-tech-stack.md)
 
 ---
 
-**17 · Where to go next** — 28'
+**12 · Where to go next** — 28'
 
 - docs.logos.co
-- roadmap.logos.co — weekly, candid
-- Basecamp releases — download it
+- roadmap.logos.co
+- Download Basecamp
 - Session 2: how to actually build
 
-*None of this is finished. That's why you're being shown it.*
+*None of this is finished. That's why you're here.*

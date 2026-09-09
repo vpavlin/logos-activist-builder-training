@@ -69,7 +69,7 @@ Where this happens:
 
 - **Discord** — questions, day to day.
 - **GitHub issues** — anything that should outlive a conversation.
-- **Office Hours** — scheduled time to ask people directly.
+- **Builders meetup** — scheduled time to ask people directly.
 - **Dev Clubs** — regular meetings and live streams where the stack gets built in
   public, including the parts that do not work. The easiest way to see how it is
   really used, and the easiest way to be seen.

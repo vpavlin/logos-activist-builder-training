@@ -581,6 +581,6 @@ the more important half. Come back for it.
 
 > **Closing line, if you want one**
 >
-> None of this is finished, and you're not being shown it because it's finished. You're
-> being shown it because the questions of what gets built on it — and who it's built for —
-> are still open, and they're being answered right now by whoever turns up.
+> None of this is finished. That's why you're here — the questions of what gets built on
+> it, and who it's built for, are still open, and they are being answered right now by
+> whoever turns up.

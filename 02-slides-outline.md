@@ -79,7 +79,7 @@ Full script: [`02-building-on-the-ecosystem.md`](02-building-on-the-ecosystem.md
 
 - Discord
 - GitHub issues
-- Office Hours
+- Builders meetup
 - Dev Clubs — meetings and live streams
 
 *Dev Clubs first if you are not sure yet. Watch before committing.*
