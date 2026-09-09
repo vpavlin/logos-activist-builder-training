@@ -65,7 +65,7 @@ Activist Builder Training
 
 ## λ Basecamp
 
-- The thing you actually open
+- What a user actually opens
 - An app that hosts modules — not a browser
 - Modules are installed and signed, from sources you choose
 

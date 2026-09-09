@@ -387,7 +387,7 @@ path for you.
 
 ## Basecamp
 
-Everything above is infrastructure. **Logos Basecamp is the thing you open.**
+Everything above is infrastructure. **Logos Basecamp is what a user actually opens.**
 
 It is a desktop application, available for Linux and macOS as a single downloadable file,
 and the closest familiar thing in shape is a browser. A browser does very little on its own;
